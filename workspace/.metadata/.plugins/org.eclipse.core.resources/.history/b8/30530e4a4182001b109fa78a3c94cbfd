@@ -1,0 +1,12 @@
+package ex04_this;
+
+public class Car {
+
+	String model,manufacturer;
+	int price;
+	
+	void set(String model,String manuString,int price) {
+		
+	}
+	
+}

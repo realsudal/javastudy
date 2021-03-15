@@ -1,0 +1,19 @@
+package quiz10;
+
+public class Lectuer {
+	String lecture;
+	String[] names;
+	Student scores;
+	
+	Lectuer(String lecture,String names[]){
+		this.lecture=lecture;
+		for(int i=0;i<names.length;i++)
+			this.names[i]=names[i];
+	}
+	
+	void exam() {
+		scores.setScores(3);
+		
+	}
+	
+}

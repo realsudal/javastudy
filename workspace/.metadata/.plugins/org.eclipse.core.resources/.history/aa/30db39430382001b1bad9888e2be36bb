@@ -1,0 +1,22 @@
+package Ex03_api;
+
+public class Ex05_SimpleDateFormat {
+
+	public static void main(String[] args) {
+		/*
+		 * 요일 : e (일~토)
+		 * 오전 오후: a
+		 * 시간
+		 * h,hh:12시간
+		 * HH,HH:24시간
+		 */
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}

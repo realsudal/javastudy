@@ -1,0 +1,15 @@
+package ex07_recusive;
+
+public class Adder {
+
+	private int total;
+	
+	public void calculate(int num) {
+		total+=num;
+		if(num>0) {
+			total+=num;
+			calculate(num-1);
+		}
+		
+	}
+}

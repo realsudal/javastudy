@@ -1,0 +1,37 @@
+package quiz08;
+
+public class Singer {
+	private String name;
+	private Song[] songs;
+	private int index;
+	
+	//songCount는 최대 노래개수 , index는 현재 가지고있는 노래개수 ! 다르다!
+	public Singer(String name,int songCount) {
+		
+		this.name=name;
+		songs=new Song[songCount];
+	}
+	
+	//노래 추가하기 메서드
+	public void addSong(Song song) {
+		songs[index++]=song;//노래를 집어넣고 인덱스를 증가시켜줌
+		//addSong()호출마다 index가 증가함으로, index는 추가된 노래의 개수이다.
+		
+		
+	}
+	
+	//info 메서드
+	public void info() {
+		//가수명, 노래 목록
+		System.out.print("가수명은 "+name +"\n ====노래 목록===");
+		for (int i=0;i<index;i++) {
+			songs[i].info();
+			//System.out.print(songs[i]);
+		}
+	}
+	
+	
+	
+	
+	
+}

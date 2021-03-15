@@ -1,0 +1,8 @@
+package quiz08;
+
+public class Producer {
+	
+	Producer(song,singer){
+		
+	}
+}

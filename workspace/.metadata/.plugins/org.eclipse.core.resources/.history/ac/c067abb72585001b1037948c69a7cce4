@@ -1,0 +1,38 @@
+package quiz03;
+
+public class Singer {
+
+	private Song song;//곡이 단1곡인 가수          //private Song[] songs;
+	private String name;
+	
+	Singer(String name){
+		this.name=name;
+	}
+	
+	
+	public Song getSong() {
+		return song;
+	}
+
+
+	public void setSong(Song song) {
+		this.song = song;
+	}
+
+
+	public String getName() {
+		return name;
+	}
+
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+
+	void info() {
+		System.out.println(name);
+		song.info();
+	}
+	
+}

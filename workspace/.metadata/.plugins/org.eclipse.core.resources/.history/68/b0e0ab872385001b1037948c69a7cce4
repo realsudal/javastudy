@@ -1,0 +1,22 @@
+package quiz06;
+
+public class MainClass {
+
+	public static void main(String[] args) {
+		Bakery bakery1=new Bakery(100,1000,10000);//빵개수,가격,
+		Bakery bakery2=new Bakery(500,500,10000);
+		
+		
+		
+		Customer customer = new Customer(20000);
+		
+		
+		
+		customer.buy(bakery1,10);
+		customer.buy(bakery2,20);
+		
+		bakery1.info();
+		bakery2.info();
+	}
+
+}

@@ -1,0 +1,12 @@
+package quiz06;
+
+public class BreadAndChnage {
+
+	private int bread;
+	private int change;
+	
+	
+	
+	
+	//빵과 잔돈을 관리하는 메소드
+}

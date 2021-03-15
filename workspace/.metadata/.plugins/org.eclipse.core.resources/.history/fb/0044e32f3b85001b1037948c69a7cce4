@@ -1,0 +1,11 @@
+package quiz08;
+
+public class Producer {
+	
+	//메서드
+	public void produce(Singer singer,Song song) {	//이렇게 클레스가 타입인 애들은 다른 메서드에서 호출할때 객체or 인스턴스화시켜 넣어서 호출!!!!!!!!!!!!!!!!!ㅈㄵㄴ 중요
+				//Singer singer이니까 singer가 객체~~~~~~~~~~~~~^^
+		//다른 클래스의 메서드 호출~!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+		singer.addSong(song);
+	}
+}

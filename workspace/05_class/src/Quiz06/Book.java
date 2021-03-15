@@ -1,0 +1,30 @@
+package Quiz06;
+
+public class Book {
+	
+	String book;
+	String writer;
+	int price;
+	
+	Book(String book,String writer,int price) {
+		this.book=book;
+		this.writer=writer;
+		this.price=price;
+	}
+	
+	//이름이 같은 함수를 또 호출 - > 오버로딩 이용
+	Book(String a,String b) {
+		this(a,b,0);
+	}
+	Book(String a,int c) {
+		this(a,"미상",c);
+	}
+	
+	
+	
+	void info() {
+		
+		System.out.println("제목 :"+book +",  저자 :"+writer+",   가격 : "+price+"원");
+	}
+	
+}

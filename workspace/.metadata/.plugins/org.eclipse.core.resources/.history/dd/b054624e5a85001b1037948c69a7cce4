@@ -1,0 +1,25 @@
+package quiz10;
+
+public class Lectuer {
+	private String lecture;
+	private Student[] student;
+	
+	Lectuer(String lecture,String names[]){
+		this.lecture=lecture;
+		student =new Student[names.length];//배열생성 위에처럼하면 안댐 ㅜ
+		for(int i=0;i<names.length;i++)
+			//this.student[i]=names[i];
+			student[i]=new Student(names[i]);
+	}
+	
+	void exam() {
+		scores.setScores(3);
+		
+	}
+	
+	void info() {
+		System.out.println(scores.info());
+		
+	}
+	
+}

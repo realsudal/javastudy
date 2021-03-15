@@ -1,0 +1,13 @@
+package ex01_random;
+
+public class ex02_Math {
+
+	public static void main(String[] args) {
+		
+		
+		//java.lang.Math //임포트가 필요없음
+		System.out.println(Math.random()); //double 타입과 동일함(0.0<=Math.random()<1.0)
+		
+	}
+
+}

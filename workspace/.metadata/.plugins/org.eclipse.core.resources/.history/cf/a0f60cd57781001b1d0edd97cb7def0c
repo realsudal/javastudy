@@ -1,0 +1,26 @@
+package Ex03_api;
+
+import java.sql.Date;
+
+public class Ex03_Date {
+
+	public static void main(String[] args) {
+		
+		//얘가 포인트임
+		//java.sql.Date
+		//db의 date타입에 맞게끔 래핑(wrapping)처리한 클래스
+		
+		
+		
+		long date =System.currentTimeMillis();
+		Date today=new Date(date);
+		
+		System.out.println(today);
+		
+		
+		
+		
+
+	}
+
+}

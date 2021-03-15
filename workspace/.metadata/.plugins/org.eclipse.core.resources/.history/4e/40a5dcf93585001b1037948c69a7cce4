@@ -1,0 +1,19 @@
+package quiz08;
+
+public class Singer {
+	private String name;
+	private Song[] songs;
+	private int index;
+	
+	public Singer(String name,int singCount) {
+		
+		this.name=name;
+		
+	}
+	
+	//노래 추가하기 메서드
+	public void addSong(Song song) {
+		
+	}
+	
+}

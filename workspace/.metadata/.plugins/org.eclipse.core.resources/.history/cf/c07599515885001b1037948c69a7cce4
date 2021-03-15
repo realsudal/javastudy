@@ -1,0 +1,15 @@
+package quiz10;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		String[] names= {"브레드","타요","뽀로로","다리우스","자두"}
+		
+		Student a=new Student("a");
+		a.setScores(5);
+		a.info();
+		
+	}
+
+}

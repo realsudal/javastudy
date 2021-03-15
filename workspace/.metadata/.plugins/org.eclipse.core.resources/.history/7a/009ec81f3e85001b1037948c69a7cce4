@@ -1,0 +1,15 @@
+package quiz09;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Soldier soldier=new Soldier("람보",3);//람보는 총을 3개 가질 수있음
+		soldier.addGun(new Gun("콜트",6));//콜트 총에 6발 충전
+		soldier.addGun2(new Gun("베레타",6));//콜트 총에 6발 충전
+		soldier.addGun3(new Gun("스미스웨든",6));//콜트 총에 6발 충전
+		
+		
+		soldier.shoot();//람보가있는 모~~든 총을 1발씩 쏨 
+	}
+
+}

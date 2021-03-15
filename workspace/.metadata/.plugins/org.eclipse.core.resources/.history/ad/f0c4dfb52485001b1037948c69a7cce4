@@ -1,0 +1,29 @@
+package quiz06;
+
+import javax.swing.text.AbstractDocument.BranchElement;
+
+public class Bakery {
+	private int breadCount;
+	private int breadPrice;
+	private int bakeryMoney;
+	
+	
+	Bakery(int breadCount,int breadPrice,int bakeryMoney) {
+		
+		this.breadCount=breadCount;
+		this.breadPrice=breadPrice;
+		this.bakeryMoney=baberyMoney;
+		
+	}
+	
+	
+	//1. 판매 메소드
+	
+	//2. 정보 출력 info메서드
+	void info() {
+		System.out.println("");
+	}
+	
+	
+	
+}

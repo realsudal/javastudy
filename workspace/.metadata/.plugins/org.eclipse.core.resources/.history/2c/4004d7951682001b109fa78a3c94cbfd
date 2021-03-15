@@ -1,0 +1,38 @@
+package Quiz01;
+
+import java.sql.Date;
+import java.util.Calendar;
+
+public class MainClass {
+
+	public static void main(String[] args) {
+		Book b=new Book();
+		
+		/*
+		 * String name;
+			String write;
+			int price;
+			int num;
+			String out_date;
+			boolean best;
+		 */
+		
+		b.name="노인과 바다";
+		b.write="헤밍웨이";
+		b.price=20000;
+		b.num=5;
+		Calendar date=Calendar.getInstance();
+		date.set(2020, 0, 10);
+		long timestemp=date.getTimeInMillis();
+		b.out_date=new Date(timestemp);
+		b.best=true;
+		
+		System.out.println(b.name);
+		System.out.println(b.write);
+		System.out.println(b.price);
+		System.out.println(b.num);
+		System.out.println(b.out_date);
+		System.out.println(b.best ? "베스트셀러":"일반");
+	}
+
+}

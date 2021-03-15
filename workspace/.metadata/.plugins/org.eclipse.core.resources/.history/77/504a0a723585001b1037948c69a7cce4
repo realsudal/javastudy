@@ -1,0 +1,13 @@
+package quiz08;
+
+public class Singer {
+	private String name;
+	private Song[] song;
+	private int index;
+	
+	public Singer(String name,Song song) {
+		
+	}
+	
+	
+}

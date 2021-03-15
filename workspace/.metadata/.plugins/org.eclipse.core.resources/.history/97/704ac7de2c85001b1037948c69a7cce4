@@ -1,0 +1,33 @@
+package quiz07;
+
+import java.util.Scanner;
+
+public class Player {
+
+	private String name;
+	private Scanner sc;
+	
+	Player(String name){
+		this.name=name;
+		
+	}
+
+	//게터 세터
+	public String getName() {
+		return name;
+	}
+
+
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	public int play() {
+		System.out.println(name+"'s game start");
+		
+	}
+	
+
+	
+	
+}

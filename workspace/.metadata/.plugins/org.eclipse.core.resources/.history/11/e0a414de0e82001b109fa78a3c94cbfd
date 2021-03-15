@@ -1,0 +1,19 @@
+package ex01_user_type;
+/*
+ * 클래스
+ * 	1.필드
+ * 		클래스에 선언한 변수 값
+ * 	2. 메소드
+ * 		클래스에 정의(만든)한 함수
+ * 	
+ */
+public class Person {
+	//필드 선언
+	String name;
+	int age;
+	double h;
+	char gender;
+	boolean isKorean;
+	
+	
+}

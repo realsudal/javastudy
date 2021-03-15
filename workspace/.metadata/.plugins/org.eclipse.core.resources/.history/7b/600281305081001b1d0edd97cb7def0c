@@ -1,0 +1,35 @@
+package ex01_random;
+
+import java.util.Scanner;
+
+public class Quiz06 {
+
+	public static void main(String[] args) {
+		//1000원에 번호 6개 한세트
+		//돈 입력 :
+		//5천원 -> 5행 6열 출력
+		//한 행에 동일한 번호가 나오면 안됨
+		
+		Scanner sc=new Scanner(System.in);
+		System.out.println("돈 입력 :");
+		
+		int money=sc.nextInt();
+		//몇번할지 == 행의 갯수
+		int num=money/1000;
+		
+		
+		do {
+			
+			
+			
+			
+			
+			num--;
+			
+		}while(num==0);
+		
+		
+		
+	}
+
+}

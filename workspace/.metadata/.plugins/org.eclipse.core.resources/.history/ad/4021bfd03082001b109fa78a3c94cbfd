@@ -1,0 +1,12 @@
+package Ex03_overloading;
+
+public class MainClass {
+
+	public static void main(String[] args) {
+		//직사각형
+		Ractangle sq=new Ractangle();
+		
+		//
+	}
+
+}

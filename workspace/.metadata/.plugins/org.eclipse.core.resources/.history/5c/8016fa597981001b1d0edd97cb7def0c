@@ -1,0 +1,22 @@
+package Ex03_api;
+
+import java.util.Calendar;
+
+public class Ex04_calender {
+
+	public static void main(String[] args) {
+		/*java.util.Calender
+		 * 1. 자바에서 날짜와 시간을 처리하는 주요 클래스이다.
+		 * 2. 미리 정해진 필드를 이용해서 각 단위를 추출할 수 있다.
+		 * 
+		 * 
+		*/
+		
+		//현재 날짜와 시간 생성
+		Calender date =Calendar.getInstance();
+		
+		int year=date.get(Calendar.YEAR);
+		int month=date.get(Calendar.MONTH)+1;
+	}
+
+}

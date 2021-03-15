@@ -1,0 +1,46 @@
+package ex01_random;
+
+import java.util.Scanner;
+
+public class Quiz06 {
+
+	public static void main(String[] args) {
+		//1000원에 번호 6개 한세트
+		//돈 입력 :
+		//5천원 -> 5행 6열 출력
+		//한 행에 동일한 번호가 나오면 안됨!!!!!!!!!! =>인덱스 번호로 '오름차순' 정렬하기
+		
+		Scanner sc=new Scanner(System.in);
+		System.out.println("돈 입력 :");
+		
+		int money=sc.nextInt();
+		//몇번할지 == 행의 갯수
+		int num=money/1000;
+		//로도 결과 배열
+		int output[][]=new int[num][num];
+		
+		do {
+			
+			for(int i=0;i<num;i++) {
+				for(int j=0;j<5;j++) {
+					
+					int x=(int)((Math.random()*num)+0);
+					int y=(int)((Math.random()*SIZE)+0);
+					
+					int temp=bingo[i][j];
+					bingo[i][j]=bingo[x][y];
+					bingo[x][y]=temp;
+				}
+			}
+			
+			
+			
+			num--;
+			
+		}while(num==0);
+		
+		
+		
+	}
+
+}

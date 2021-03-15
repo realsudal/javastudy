@@ -1,0 +1,19 @@
+package Ex03_overloading;
+
+
+public class MainClass {
+
+	public static void main(String[] args) {
+		
+		/*
+		 * 오버라이딩 
+		 * 	'메소드의 이름이 같아도' 매개변수나 타입이 다르면 => 다른 메소드가 가능함
+		 */
+		
+		//직사각형
+		//Rectangle sq=new Rectangle();
+		
+		//
+	}
+
+}

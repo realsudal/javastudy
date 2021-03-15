@@ -1,0 +1,14 @@
+package quiz02;
+
+public class Circle {
+
+	
+	private Coordinates center;
+	private double radius;
+	
+	Circle(Coordinates center,double radius){
+		this.center=center;
+		this.radius=radius;
+	}
+	
+}

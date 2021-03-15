@@ -1,0 +1,21 @@
+package Ex03_api;
+
+public class Quiz01 {
+
+	public static void main(String[] args) {
+		//string과 stringbuilder의 성능비교
+		//1~10만 을 모두 연결.
+		//ex)12345678910111213
+		//각 클래스별 연결에 소요된 시간을 ns(나노초)단위로 출력합니다.
+		
+		
+		//스트링
+		String str="";
+		for(int i;i<=100000;i++) {
+			str+=i;
+		}
+		
+		
+	}
+
+}

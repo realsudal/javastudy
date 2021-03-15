@@ -1,0 +1,20 @@
+package Ex03_overloading;
+
+public class Rectangle {
+	
+	int a,b;
+	
+	void set(int a,int b) {
+		this.a=a;
+		this.b=b;
+		
+		
+	}
+	void getArea() {
+		
+		return this.a*this.b;
+		
+	}
+	
+	
+}

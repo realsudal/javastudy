@@ -1,0 +1,14 @@
+package quiz10;
+
+public class Student {
+	private String name;
+	private int[] scores;	//점수들
+	private double average;//평균
+	private char grade;//학점 a~f
+	private boolean inPass;	// 합격 불합격(평균 60이상)
+	
+	
+	
+	
+	
+}

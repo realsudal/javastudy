@@ -1,0 +1,38 @@
+package Ex03_api;
+
+import java.util.Calendar;
+
+import javax.xml.ws.Holder;
+
+public class Ex04_calender {
+
+	public static void main(String[] args) {
+		/*java.util.Calender
+		 * 1. 자바에서 날짜와 시간을 처리하는 주요 클래스이다.
+		 * 2. 미리 정해진 필드를 이용해서 각 단위를 추출할 수 있다.
+		 * 
+		 * 
+		*/
+		
+		//현재 날짜와 시간 생성
+		Calendar date =Calendar.getInstance();
+		
+		int year=date.get(Calendar.YEAR);
+		int month=date.get(Calendar.MONTH)+1; //Calender.MONTH 는 0~11범위
+		int day = date.get(Calendar.DAY_OF_MONTH);
+		int weekNo=date.get(Calendar.DAY_OF_WEEK);
+		System.out.println(weekNo); //weekNo : 일주일의 번호 
+		System.out.println(year+"-"+month+"-"+day);
+		
+		int ampm=date.get(Calendar.AM_PM);
+		int hour=date.get(Calendar.HOUR);//0~11
+		int hour2=date.get(Calendar.HOUR_OF_DAY);//0~23
+		int minute=date.get(Calendar.MINUTE);
+		int second=date.get(Calendar.SECOND);
+		int millis=date.get(Calendar.MILLISECOND);
+		System.out.println(ampm+" "+hour+":"+minute+":"+second+"."+millis);
+		
+		
+	}
+
+}

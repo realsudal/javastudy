@@ -1,0 +1,22 @@
+package Ex03_overloading;
+
+public class Rectangle {
+	
+	int c=0;
+	
+	int set(int a,int b) {
+		c=a*b;
+		
+		
+		if(a<0&&b<0)
+			return c;
+		return c;
+	}
+	void getArea(int c) {
+		
+		System.out.println(c);
+		
+	}
+	
+	
+}

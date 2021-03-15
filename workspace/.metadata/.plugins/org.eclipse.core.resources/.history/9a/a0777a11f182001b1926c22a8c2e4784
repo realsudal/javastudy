@@ -1,0 +1,15 @@
+package quiz04;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Gun gun=new Gun("m4",2);//총과 현재 장전수
+		Soldier soldier=new Soldier("mimi",gun);
+		
+		soldier.shoot();//빵야 -> 1발남앗ㅅㅂ니다
+		soldier.shoot();//빵야 -> 0발남앗ㅅㅂ니다
+		soldier.shoot();//없어
+		
+	}
+
+}

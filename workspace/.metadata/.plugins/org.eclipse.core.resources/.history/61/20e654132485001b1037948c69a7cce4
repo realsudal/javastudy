@@ -1,0 +1,19 @@
+package quiz06;
+
+public class Bakery {
+	private int breadCount;
+	private int breadPrice;
+	private int baberyMoney;
+	
+	
+	private Bakery() {
+	}
+	
+	
+	//1. 판매 메소드
+	
+	//2. 정보 출력 info메서드
+	
+	
+	
+}

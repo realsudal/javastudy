@@ -1,0 +1,26 @@
+package quiz08;
+
+public class Main {
+
+	public static void main(String[] args) {
+		//객체 생성
+		Producer producer=new Producer();
+		
+		Singer singer1=new Singer("nana", 3);
+		
+		Singer singer2=new Singer("mimi", 5);
+		
+		
+		
+		
+		producer.produce(singer1, new Song("hahaha", "nothing"));		
+		producer.produce(singer2, new Song("eeee", "happy"));
+		
+		
+		
+		
+		singer1.info();
+		singer2.info();
+	}
+
+}

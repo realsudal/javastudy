@@ -1,0 +1,20 @@
+package Ex03_api;
+
+public class Ex06_wrapper_class {
+
+	public static void main(String[] args) {
+		/*
+		 * wrapper class
+		 * 1.primitive type - > reference type 변경 클래스
+		 * 2.변수 ->객체로 변경해주는 클래스
+		 * 3. 종류
+		 * 		1)int 	 > integer
+		 * 		2)long   > Long
+		 * 		3)double > Double
+		 * 		4)char 	 > Character
+		 * 		5)boolean> Boolean
+		 * 
+		 */
+	}
+
+}

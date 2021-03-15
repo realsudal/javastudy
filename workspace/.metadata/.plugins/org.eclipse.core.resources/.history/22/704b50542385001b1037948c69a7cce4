@@ -1,0 +1,15 @@
+package quiz06;
+
+public class Customer {
+
+	private int customerBread;
+	private int money;
+	
+	Customer(){
+		
+		
+	}
+	
+	
+	
+}

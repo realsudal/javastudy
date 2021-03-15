@@ -1,0 +1,46 @@
+package quiz04;
+
+public class Gun {
+	private String model;
+	private int bullet;//현재 발
+	private final int al=6; //최대발
+	
+	Gun (String model,int bullet){
+		this.model=model;
+		this.bullet=bullet;
+	}
+
+	
+	public void Bullet() {
+		System.out.println(bullet);
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	public String getModel() {
+		return model;
+	}
+
+	public void setModel(String model) {
+		this.model = model;
+	}
+
+	public int getBullet() {
+		return bullet;
+	}
+
+	public void setBullet(int bullet) {
+		this.bullet = bullet;
+	}
+
+	public int getAl() {
+		return al;
+	}
+	
+	
+}

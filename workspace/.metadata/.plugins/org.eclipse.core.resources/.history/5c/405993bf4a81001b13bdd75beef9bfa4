@@ -1,0 +1,92 @@
+package ex01_random;
+
+import java.util.Scanner;
+
+public class Quiz04 {
+
+	public static void main(String[] args) {
+		/*
+		 * 가위바위보 : 입력
+		 * 플레이어 : 가위,  컴퓨터 : 주먹 
+		 * 졌습니다.이겼습니다.비겼습니다.
+		 * => ?승?무 입니다. (지면끝)
+		 */
+		Scanner sc=new Scanner(System.in);
+		
+		
+		/*
+		String ran,ans;
+		int win=0;
+		int same=0;
+		int index,player;
+		
+		
+		String []arr= {"가위","바위","보"};
+		
+		while(true) {
+			index=(int)(Math.random()*3)+0;
+			ran=arr[index];
+			
+			System.out.println("가위,바위,보 입력 : ");
+			ans=sc.next();
+			if(ans.equals("가위")) {
+				player=0;
+			}
+			
+			if(ran.equals(ans)) {
+				System.out.println("비겼습니다");
+				same++;
+			}
+			else if(arr[index]<)
+			
+			
+			
+		}*/
+		
+		String []arr= {"가위","바위","보"};
+		
+		int win=0;
+		int same=0;
+		
+		//loop 자주쓰면 안좋음 ㅎ
+		loop:
+		while(true) {
+			System.out.println("가위,바위,보 입력 : ");
+			int player=0;
+			switch (sc.next()) {
+			case "바위":
+				player=1;
+				break;
+
+			case "보":
+				player=2;
+				break;
+			}
+			
+			
+			
+			System.out.print("player는 "+arr[player]+", ");
+			
+			int index=(int)(Math.random()*3)+0;
+			System.out.println("컴터는 "+arr[index]);
+			
+			switch (player-index) {
+			case -2:
+			case 1:
+				System.out.println("이김");
+				break;
+			case 0:
+				System.out.println("비김");
+				break;
+
+			default:
+				break loop;
+			}
+		
+		}
+		
+		
+		
+	}
+
+}

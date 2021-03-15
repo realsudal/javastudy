@@ -1,0 +1,40 @@
+package ex01_random;
+
+import java.util.Scanner;
+
+public class Quiz02 {
+
+	public static void main(String[] args) {
+		// 난수를 업다운 게임으로 맞추기(1~10000)
+		//총 ??번 만에 정답
+		int ran=(int)(Math.random()*9999)+1;
+		Scanner sc=new Scanner(System.in);
+		int i=1;
+		int ans,top,bottom;
+		while(true){
+			
+			System.out.print("숫자를 입력 :");
+			ans=sc.nextInt();
+			if( 1<=ans || ans<=10000) {
+				System.out.println("범위 이탈 ("+bottom+"~"+top+")");
+				continue;
+			}
+			if(ans==ran) {
+				System.out.println(i+"번 만에 맞췄습니다.");
+				break;
+			}else if(ans<ran){
+				System.out.println("업");
+				bottom=ans+1;
+			}else {
+				System.out.println("다운");
+				bottom=ans-1;
+				
+			}i++;
+			
+		}
+		//while(1<=ans || ans<=10000);
+		
+		
+	}
+
+}

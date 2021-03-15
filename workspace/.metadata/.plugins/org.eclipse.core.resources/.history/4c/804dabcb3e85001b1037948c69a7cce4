@@ -1,0 +1,27 @@
+package quiz09;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Soldier soldier=new Soldier("람보",3);//람보는 총을 3개 가질 수있음
+		soldier.addGun(new Gun("콜트",6));//콜트 총에 6발 충전
+		soldier.addGun(new Gun("베레타",6));//베레타 총에 6발 충전
+		soldier.addGun(new Gun("스미스웨든",6));//스미스웨든 총에 6발 충전
+		
+		
+		soldier.shoot();//람보가있는 모~~든 총을 1발씩 쏨 
+		soldier.shoot(1);//매개변수가 다른 메서드 -> 1번총(콜트)만 1발쏨
+		soldier.shoot("베레타");//베레타를 1발쏨 
+		
+		
+		soldier.info();//이름 - 람보 , 총- 콜트(4발), 베레타(4발),스미스웨든(5발) 남음
+		
+		
+		soldier.reload();//모든 총에 6발 추가
+		soldier.reload(1,6);//1번 총에 6발 추가 
+		soldier.reload("베레타",6);//베레타에 6발 추가 
+		
+		
+	}
+
+}

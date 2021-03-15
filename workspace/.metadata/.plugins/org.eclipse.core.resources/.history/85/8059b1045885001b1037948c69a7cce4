@@ -1,0 +1,12 @@
+package quiz10;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Student a=new Student("a");
+		a.setScores(5);
+		a.info();
+		
+	}
+
+}

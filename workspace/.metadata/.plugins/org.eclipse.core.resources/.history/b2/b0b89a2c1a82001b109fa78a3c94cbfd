@@ -1,0 +1,13 @@
+package ex02_Method;
+
+public class MainMethod {
+
+	public static void main(String[] args) {
+
+		Person p = new Person();
+		p.set("mimi", 20, '남', true);
+		
+		System.out.println(p.name+" "+p.gender);
+	}
+
+}

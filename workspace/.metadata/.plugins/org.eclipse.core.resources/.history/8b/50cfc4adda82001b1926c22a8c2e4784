@@ -1,0 +1,46 @@
+package quiz01;
+
+public class Watch {
+
+	/*
+	 * Watch watch=new Watch(10,45,30);//10시 45분 30초
+		
+		watch.addHour(25);//25시간후 (1시간 후)
+		
+		watch.addMinute(61);//61분 후 (1시간 1분 후)
+		
+		watch.addSecond(3661);//3661초 후 (1시간 1분 1초 후)
+		
+		watch.see();//13시 47분 31초  출력
+	 */
+	private int h;
+	private int m;
+	private int s;
+	
+	Watch(int h,int m,int s){
+		this.h=h;
+		this.m=m;
+		this.s=s;
+		
+	}
+	void addHour(int h) {
+			this.h+=h;
+			h%=24;//보통 반복 되는 연산은 % 사용
+	}
+	void addMinute(int m) {
+			this.m+=m;
+			addHour(m/60);
+			this.m%=60;
+			
+		}
+	void addSecond(int s) {
+		this.s+=s;
+		addMinute(s/60);
+		this.s%=60;
+	}
+	
+	void see() {
+		System.out.println(h+"시"+m+"분"+s+"초");
+	}
+	
+}

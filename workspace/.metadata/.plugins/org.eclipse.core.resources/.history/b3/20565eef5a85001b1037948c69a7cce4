@@ -1,0 +1,26 @@
+package quiz10;
+
+public class Lectuer {
+	private String lecture;
+	private Student[] student;
+	
+	Lectuer(String lecture,String names[]){
+		this.lecture=lecture;
+		student =new Student[names.length];//배열생성 먼저 해줘야지!!!!! 이거 빼먹지마
+		for(int i=0;i<names.length;i++)
+			//this.student[i]=names[i];
+			student[i]=new Student(names[i]);//위에처럼 넣는거 아니야...ㅠ
+	}
+	
+	void exam(int subject) {
+		for(Student student:student)
+			student.setScores(subject);
+		
+	}
+	
+	void info() {
+		System.out.println(student.info());
+		
+	}
+	
+}

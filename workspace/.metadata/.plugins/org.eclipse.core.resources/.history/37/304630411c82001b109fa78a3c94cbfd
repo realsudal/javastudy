@@ -1,0 +1,65 @@
+package ex02_Method;
+
+/*
+ * 메소드 
+ * 	1.구성
+ * 		1)결과 타입
+ * 		2)메소드 명
+ * 		3)매개변수
+ * 	2.정의
+ * 		결과타입 메소드명(매개변수){
+ * 			메소드 본문
+ * 		}
+ * 
+ */
+
+
+
+
+public class Person {
+
+	String name;//null
+	int age;//0
+	char gender;// \n -> null문자
+	boolean isKorean;//false
+	double heigh;
+	double weigh;
+	
+	//메소드를 사용할수있는 함수의 개념
+	void set(String n ,int a, char g,boolean isk,double h,double w) {
+		name=n;
+		age=a;
+		gender=g;
+		isKorean=isk;
+		heigh=h;
+		weigh=w;
+	}
+	
+	//결과 타입 : 결과 값이 없음
+	//메소드명 info
+	//매개변수
+	//역할: 객체가 가지고있는 필드 값을 출력해줌
+	
+	void info() {
+		System.out.println(name);
+		System.out.println(gender);
+		System.out.println(age);
+		System.out.println(isKorean ? "한국인":"외국인");
+	}
+	
+	
+	
+	
+	//1.결과 타입  double
+	//getBMI 메소드
+	//매개변수 없음
+	//객체의 체질량지수 반환!!
+	double getMBI() {
+		double bmi=weigh/Math.pow(heigh, 2);
+		reutn mbi;
+	}
+	
+	
+	
+	
+}

@@ -1,0 +1,42 @@
+package ex02_String;
+
+import java.util.Scanner;
+
+public class Quiz02 {
+
+	public static void main(String[] args) {
+		//정수 실수 판별하기
+		//입력 : 
+		//정수입니다
+		//실수입니다
+		
+		/*
+		while(true) {
+			Scanner sc=new Scanner(System.in);
+			System.out.print("정수,실수  값 입력 :");
+			double a=sc.nextDouble();
+			
+			if(a%1!=0) {
+				System.out.println("실수\n");
+			}else {
+				System.out.println("정수\n");
+			}
+			
+		}*/
+		while(true) {
+			Scanner sc=new Scanner(System.in);
+			System.out.print("정수,실수  값 입력 :");
+			String a=sc.next();
+			
+			if(a%1!=0) {
+				System.out.println("실수\n");
+			}else {
+				System.out.println("정수\n");
+			}
+			
+		}
+		
+		
+	}
+
+}

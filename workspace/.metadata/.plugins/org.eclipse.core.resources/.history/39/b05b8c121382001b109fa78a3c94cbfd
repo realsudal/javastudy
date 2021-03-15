@@ -1,0 +1,31 @@
+package Quiz01;
+
+public class MainClass {
+
+	public static void main(String[] args) {
+		Book b=new Book();
+		
+		/*
+		 * String name;
+	String write;
+	int price;
+	int num;
+	String out_date;
+	boolean best;
+		 */
+		b.name="노인과 바다";
+		b.write="헤밍웨이";
+		b.price=20000;
+		b.num=5;
+		b.out_date="2000-5-18";
+		b.best=true;
+		
+		System.out.println(b.name);
+		System.out.println(b.write);
+		System.out.println(b.price);
+		System.out.println(b.num);
+		System.out.println(b.out_date);
+		System.out.println(b.best);
+	}
+
+}

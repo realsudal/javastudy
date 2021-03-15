@@ -1,0 +1,13 @@
+package ex01_user_type;
+
+public class MainClass {
+
+	public static void main(String[] args) {
+		
+		
+		//클래스 person을 타입으로 하는 "객체"를 생성
+		
+		
+	}
+
+}

@@ -1,0 +1,16 @@
+package ex01_random;
+
+public class Quiz06 {
+
+	public static void main(String[] args) {
+		//1000원에 번호 6개 한세트
+		//돈 입력 :
+		//5천원 -> 5행 6열 출력
+		//한 행에 동일한 번호가 나오면 안됨
+		
+		
+		
+		
+	}
+
+}

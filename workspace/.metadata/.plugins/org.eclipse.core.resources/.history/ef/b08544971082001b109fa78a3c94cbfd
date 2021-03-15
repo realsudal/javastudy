@@ -1,0 +1,27 @@
+package ex01_user_type;
+
+public class MainClass {
+
+	public static void main(String[] args) {
+		
+		
+		//클래스 person을 타입으로 하는 "객체"를 생성
+		//타입 person, 객체 p1
+		Person p=new Person();
+		
+		//클래스에 포함된 멤버(필드,메소드)는 마침표(.)를 이용해서 호출
+		//초기화된 상태 출력
+		System.out.println(p.name);
+		System.out.println(p.age);
+		System.out.println(p.h);
+		System.out.println(p.gender);
+		System.out.println(p.isKorean);
+		
+		
+		
+		//person은 reference타입 (데이터 변형에 좋은 타입 ex-DB)
+		System.out.println(p);//p객체의 '클래스이름@메모리 저장위치' 출력
+		
+	}
+
+}

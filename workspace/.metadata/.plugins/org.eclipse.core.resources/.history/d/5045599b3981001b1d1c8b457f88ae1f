@@ -1,0 +1,32 @@
+package ex01_random;
+
+public class ex02_Math {
+
+	public static void main(String[] args) {
+		
+		
+		//java.lang.Math //임포트가 필요없음
+		System.out.println(Math.random()); //double 타입과 동일함(0.0<=Math.random()<1.0)
+		
+		//Math.random()의 결과가 0.1보다 작을 확률은? =>10%
+		//0.2보다 작은 확률은 => 20%
+		
+		//10퍼센트 확률로 강화 성공,90% 실패
+		if(Math.random()<0.1) {
+			System.out.println("강화 성공");
+		}else {
+			System.out.println("실패");
+		}
+		
+		/*	<난수의 정수 범위를 만드는 방법>
+		 * Math.random()				(0.0<= Math.random() <1.0)
+		 * Math.random()*3			(0.0<= Math.random() <3.0)
+		 * (int)(Math.random()*3)	(0<= Math.random() <3)
+		 * (int)(Math.random()*3)+1	(1<= Math.random() <4)
+		 * 	
+		*/
+		
+		
+	}
+
+}

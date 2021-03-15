@@ -1,0 +1,17 @@
+package quiz07;
+
+public class Game {
+
+	//private Player[] players=new Player[playerCount];
+	private Player[] players;
+	
+	public Game(int playerCount) {
+		//배열의 선언과 생성을 분리
+		players=new Player[playerCount];
+		
+	}
+	
+	public void setPlayer(){
+		String[] names= {"mimi","me","nana","jh","enu"}
+	}
+}

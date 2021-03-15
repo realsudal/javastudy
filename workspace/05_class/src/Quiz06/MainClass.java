@@ -1,0 +1,22 @@
+package Quiz06;
+
+
+
+public class MainClass {
+
+	public static void main(String[] args) {
+
+		Book b1=new	Book("어린왕자","생텍",10000);
+		
+		b1.info();//제목 :어린왕자, 저자:,기격 원
+		
+		Book b2=new	Book("소나기","황순원");
+		
+		b2.info();//제목 :어린왕자, 저자:,가격:0원
+		
+		Book b3=new	Book("홍길동전",5000);
+		
+		b3.info();//제목 :어린왕자, 저자:미상,기격 5000 원
+	}
+
+}

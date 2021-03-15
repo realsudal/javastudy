@@ -1,0 +1,28 @@
+package ex07_recusive;
+
+public class Adder {
+
+	private int total;
+	
+	public void calculate(int num) {
+		
+		if(num==0) {
+			return; //결과타입이 void 인경우에만 return;을 통해 메소드를 종료
+		}
+		total+=num;
+		calculate(num-1);
+		
+	}
+
+	public int getTotal() {
+		return total;
+	}
+
+	//쓸일은 없지만 세터는 그냥 둠
+	public void setTotal(int total) {
+		this.total = total;
+	}
+	
+	
+	
+}

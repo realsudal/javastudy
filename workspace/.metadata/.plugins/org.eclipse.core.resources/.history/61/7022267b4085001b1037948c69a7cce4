@@ -1,0 +1,29 @@
+package quiz09;
+
+public class Soldier {
+
+	private String name;
+	private Gun[] gun;
+	private int index;
+
+	
+	Soldier(String name,int gun){
+		this.name=name;
+		this.gun=new Gun[gun];		
+	}
+	//메소드 - 무슨 총에 몇발 장전 
+	void addGun(Gun gun) {
+		if (index<gun.length)
+			gun[index++]=gun;//노래를 집어넣고 인덱스를 증가시켜줌
+		else
+			System.out.println("더이상 노래 추가 불가합니다.");
+		//addSong()호출마다 index가 증가함으로, index는 추가된 노래의 개수이다.
+		
+	}
+	
+	void shoot() {
+		
+	}
+	
+	
+}

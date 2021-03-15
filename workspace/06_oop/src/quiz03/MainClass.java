@@ -1,0 +1,13 @@
+
+package quiz03;
+
+public class MainClass {
+	public static void main(String[] args) {
+		
+		Singer singer = new Singer("mimi");
+		singer.setSong(new Song("컴퓨터 ",4.5));
+		
+		singer.info(); //미ㅣㅁ(노래이름,4.5) 출력
+		
+	}
+}

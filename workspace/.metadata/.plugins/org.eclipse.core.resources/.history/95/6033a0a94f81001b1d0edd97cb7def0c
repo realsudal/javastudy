@@ -1,0 +1,9 @@
+package ex01_random;
+
+public class Quiz06 {
+
+	public static void main(String[] args) {
+		//1000원에 번호 6개 한세트
+	}
+
+}

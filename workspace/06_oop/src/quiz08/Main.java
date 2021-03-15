@@ -1,0 +1,26 @@
+package quiz08;
+
+public class Main {
+
+	public static void main(String[] args) {
+		//객체 생성
+		Producer producer=new Producer();
+		
+		Singer singer1=new Singer("nana", 3);
+		
+		Singer singer2=new Singer("mimi", 5);
+		
+		
+		
+		//메서드이용 - 곡추가
+		producer.produce(singer1, new Song("hahaha", "nothing"));	//클래스 타입  - > 객체를 넣거나 생성자를 넣거나	!!!!!!!!!!!
+		producer.produce(singer2, new Song("eeee", "happy"));
+		
+		
+		
+		
+		singer1.info();
+		singer2.info();
+	}
+
+}

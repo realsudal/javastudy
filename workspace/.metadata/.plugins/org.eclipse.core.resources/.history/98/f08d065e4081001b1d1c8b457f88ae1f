@@ -1,0 +1,45 @@
+package ex01_random;
+
+public class Quiz01 {
+
+	public static void main(String[] args) {
+		/*
+		 * 임시 비밀번호 발급하기
+		 * 	영문대문자+아라비아숫자
+		 * 	약 5:5
+		 */
+		
+		
+		String pass="";
+		if(Math.random()<0.5) {
+			int n = (int)(Math.random()*10)+'0';
+			
+			pass+=(char)n;
+		}else {
+			int m=(int)(Math.random()*26)+'A';
+			pass+=(char)m;
+		}
+		
+		System.out.println(pass);
+		
+		
+		
+		/*
+		 * String tempPw;
+		 * for (int n=0;n<6;n++){
+		 * 	int ind=(int)(Math.random())*CharSet.length)
+		 * 	tempPw+=charSet[ind];
+		 * }
+		 * sysout(tempPw);
+		 */
+		
+		
+		
+		
+		
+			
+		
+		
+	}
+
+}

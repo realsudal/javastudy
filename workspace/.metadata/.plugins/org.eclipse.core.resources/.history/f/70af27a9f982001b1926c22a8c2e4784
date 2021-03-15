@@ -1,0 +1,11 @@
+package quiz05;
+
+public class Main {
+
+	public static void main(String[] args) {
+		BankAccount me=new BankAccount("1111",10000);
+		BankAccount you=new BankAccount("1112",10000);
+		
+	}
+
+}

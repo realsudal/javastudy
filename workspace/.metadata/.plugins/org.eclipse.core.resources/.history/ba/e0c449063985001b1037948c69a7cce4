@@ -1,0 +1,11 @@
+package quiz08;
+
+public class Producer {
+	
+	//메서드
+	public void produce(Singer singer,Song song) {
+				
+		//다른 클래스의 메서드 호출~!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+		singer.addSong(song);
+	}
+}

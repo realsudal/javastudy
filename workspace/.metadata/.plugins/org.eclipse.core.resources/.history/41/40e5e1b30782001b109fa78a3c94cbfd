@@ -1,0 +1,12 @@
+package Ex03_api;
+
+public class Quiz02 {
+
+	public static void main(String[] args) {
+		//캘린더를 활용해서 기념일을 계산
+		//날짜 2개 만들기 
+		//그중 하나는 기념일로 지정
+		//날짜의 차이를 구하면 된다. -> ?일로 출력
+	}
+
+}

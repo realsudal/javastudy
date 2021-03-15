@@ -1,0 +1,10 @@
+package ex07_recusive;
+
+public class Calculater {
+	
+	//getFactorial()메소드는 n!값을 반환한다.
+	//3! =3x2x1
+	public int getFactorial(int n) {
+		
+	}
+}

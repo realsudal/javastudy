@@ -1,0 +1,49 @@
+package quiz06;
+
+import javax.swing.text.AbstractDocument.BranchElement;
+
+public class Bakery {
+	private int breadCount;
+	private int breadPrice;
+	private int bakeryMoney;
+	
+	
+	Bakery(int breadCount,int breadPrice,int bakeryMoney) {
+		
+		this.breadCount=breadCount;
+		this.breadPrice=breadPrice;
+		this.bakeryMoney=bakeryMoney;
+		
+	}
+	
+	
+	//1. 판매 메소드
+	void sell(int money) {
+		//판매 빵 개수
+		int sellBread=money/breadPrice;
+		//잔돈
+		int change=money%breadPrice;
+		
+		//고객에게 돌려줄 빵과 잔돈
+		BreadAndChnage bnc=new BreadAndChnage(sellBread,change);
+		
+		//Bekery의 판매처리
+		bakeryMoney+=(money -change );
+		breadCount-=(sellBread);
+		//고갹에게 빵과 잔돈 전달
+		return bnc;
+		
+		
+	}
+	
+	//2. 정보 출력 info메서드
+	void info() {
+		//손님 메서드에서 빵개수 받아와 몇개 남앗았는지 체크
+		System.out.println("");
+	}
+	
+	void
+	
+	
+	
+}

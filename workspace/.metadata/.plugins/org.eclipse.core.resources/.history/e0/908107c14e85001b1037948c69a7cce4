@@ -1,0 +1,70 @@
+package quiz09;
+
+public class Soldier {
+	//필드는 초기화 되어있음 
+	private String name;
+	private Gun[] guns;
+	private int index;
+
+	
+	Soldier(String name,int gunNo){
+		this.name=name;
+		guns=new Gun[gunNo];		
+	}
+	//메소드 - 무슨 총에 몇발 장전 
+	public void addGun(Gun gun) {
+		if (index<this.guns.length)
+			this.guns[index++]=gun;
+		else
+			System.out.println("더이상 총 추가 불가합니다.");
+		
+	}
+	
+	//메서드 - 총쏘기
+	public void shoot() {
+		//주의!! index가 실제 추가되어있는 총개수!! guns는 최대길이일뿐
+		for(int i=0;i<index;i++) 
+			guns[i].shoot();
+	}
+	void shoot(int bullCount) {
+		guns[bullCount-1].shoot();
+		
+	}
+	void shoot(String model) {
+		for(int i=0;i<index;i++) {
+			if(guns[i].getModel().equals(model))
+				guns[i].shoot();
+			
+		}
+		
+	}
+	
+	//메서드 - 모든 총에 1발씩 추가
+	void reload(int bullet){
+		for(Gun gun:guns) {
+			if(gun!=null)
+				gun.reload(bullet);
+		}
+	}
+	void reload(int gunNo,int bullet) {
+		guns[bullet-1].reload();
+		
+	}
+	void reload(String model,int bullet) {
+		for(Gun gun:guns) {
+			if(gun!=null&&gun.getModel().equals(model))
+				gun.reload(bullet);
+		}
+	}
+	
+	
+	
+	//메서드 - 정보 출력
+	void info() {
+		System.out.println("\n이름: "+name);
+		for(int i=0;i<index;i++) {
+			guns[i].info();
+		}
+	}
+	
+}

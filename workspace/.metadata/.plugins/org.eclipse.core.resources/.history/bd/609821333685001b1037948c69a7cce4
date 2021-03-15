@@ -1,0 +1,36 @@
+package quiz08;
+
+public class Singer {
+	private String name;
+	private Song[] songs;
+	private int index;
+	
+	public Singer(String name,int singCount) {
+		
+		this.name=name;
+		index=singCount-1;
+		
+	}
+	
+	//노래 추가하기 메서드
+	public void addSong(Song song) {
+		for (int i=0;i<index;i++) {
+			songs[i]=song;
+		}
+		
+	}
+	
+	//info 메서드
+	public void info() {
+		//가수명, 노래 목록
+		System.out.print("가수명은 "+name +", 노래 목록은");
+		for (int i=0;i<index;i++) {
+			songs[i];
+		}
+	}
+	
+	
+	
+	
+	
+}

@@ -1,0 +1,34 @@
+package Ex03_api;
+
+public class Quiz01 {
+
+	public static void main(String[] args) {
+		//string과 stringbuilder의 성능비교
+		//1~10만 을 모두 연결.
+		//ex)12345678910111213
+		//각 클래스별 연결에 소요된 시간을 ns(나노초)단위로 출력합니다.
+		
+		
+		//스트링
+		String str="";
+		long start1 =System.nanoTime();
+		
+		for(int i=1;i<=100000;i++) {
+			str+=i;
+		}
+		long end1=System.nanoTime();
+		System.out.println("string 경과시간 :"+(endl-start1)+"ns");
+		
+		
+		String str="";
+		long start2 =System.nanoTime();
+		
+		for(int i=1;i<=100000;i++) {
+			StringBuilder sb=new StringBuilder("hello");
+		}
+		long end2=System.nanoTime();
+		
+		
+	}
+
+}

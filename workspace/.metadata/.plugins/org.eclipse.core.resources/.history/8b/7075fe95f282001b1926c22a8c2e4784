@@ -1,0 +1,14 @@
+package quiz04;
+
+public class Gun {
+	private String model;
+	private int bullet;//현재 발
+	private final int al=6; //최대발
+	
+	Gun (String model,int bullet){
+		this.model=model;
+		this.bullet=bullet;
+	}
+	
+	
+}

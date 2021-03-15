@@ -1,0 +1,97 @@
+package quiz10;
+
+import java.text.DecimalFormat;
+import java.util.Arrays;
+
+public class Student {
+	private String name;
+	private int[] scores;	//점수들
+	private double average;//평균
+	private char grade;//학점 a~f
+	private boolean inPass;	// 합격 불합격(평균 60이상)
+	
+
+	public Student(String name){
+		this.name=name;
+	}
+	
+	
+	
+	//겟터 세터
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int[] getScores() {
+		return scores;
+	}
+
+	public void setScores(int[] scores) {
+		this.scores = scores;
+	}
+	//임의의 메서드
+	public void setScores(int scoreCount) {
+		scores=new int[scoreCount];//배열이 scoreCount길이만큼 생성
+	
+		for(int i=0;i<scoreCount;i++) {
+			//30퍼 확률 0~49점 임의로 생성
+			if(Math.random()<0.3)
+				scores[i]=(int)(Math.random()*50);
+			//40퍼 확률50~79점 임의로 생성
+			else if(Math.random()<0.7)
+				scores[i]=(int)(Math.random()*30)+50;
+			//30퍼 확률 80~100점 임의로 생성
+			else
+				scores[i]=(int)(Math.random()*21)+80;
+		}
+		
+		//평균 구하기
+		int total=0;
+		for(int score:scores) {
+			total+=score;
+		}
+		
+		setAverage((double)(total/scores.length));
+	}
+	
+	
+	public double getAverage() {
+		return average;
+	}
+
+	public void setAverage(double average) {
+		this.average = average;
+	}
+
+	public char getGrade() {
+		return grade;
+	}
+
+	public void setGrade(char grade) {
+		this.grade = grade;
+	}
+
+	public boolean isInPass() {
+		return inPass;
+	}
+
+	public void setInPass(boolean inPass) {
+		this.inPass = inPass;
+	}
+	
+	
+	public void info() {
+		System.out.println("이름 : "+name);
+		System.out.println("점수들 : "+Arrays.toString(scores));
+		System.out.println("평균 :"+new DecimalFormat("0.00").format(average)+"점");//소수 2자리까지 출력 =>DecimalFormat(0.00)
+		System.out.println("학점 :"+grade);
+		System.out.println(inPass ? "<합격>":"<불합격>");
+	}
+	
+	
+	
+}

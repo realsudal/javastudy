@@ -1,0 +1,15 @@
+package ex04_this;
+
+public class MainClass {
+
+	public static void main(String[] args) {
+		/*
+		 * this란 메소드밖 클래스의 필드(변수)를 의미
+		 *		this.필드
+		 *		this()
+		 */
+		Car myCar=new Car();
+		
+	}
+
+}

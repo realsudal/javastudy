@@ -1,0 +1,22 @@
+package Quiz05;
+
+public class Circle {
+	double radius;
+	/*
+	 * won.getRadius(1.5);
+		System.out.println("원둘레 : "+ won.getCircum());
+		System.out.println("원넓이 : "+won.getArea());
+	 */
+	
+	void getRadius(double radius) {
+		this.radius=radius;
+	}
+	int getCircum() {
+		return radius*2*Math.PI;
+	}
+	int getArea() {
+		return  Math.pow(radius, 2)*Math.PI;
+	}
+	
+
+}

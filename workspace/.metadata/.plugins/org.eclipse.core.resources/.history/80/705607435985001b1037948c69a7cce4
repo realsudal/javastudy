@@ -1,0 +1,17 @@
+package quiz10;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		String[] names= {"브레드","타요","뽀로로","다리우스","자두"};
+		Lectuer lectuer=new Lectuer("스프링 프레임워크",names);
+		
+		lecture.exam();//시험을 보고 setScores()가 호출됨
+		lecture.info();//학생 정보 출력 + 강좌 전체 평균
+		
+		
+		
+	}
+
+}

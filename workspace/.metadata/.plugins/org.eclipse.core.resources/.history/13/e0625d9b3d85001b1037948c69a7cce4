@@ -1,0 +1,41 @@
+package quiz09;
+
+public class Gun {
+
+	private String model;
+	private int bullet;
+	private final int FULL_BULLET=6;
+	
+	
+	Gun(String model,int bullet){
+		this.model=model;
+		this.bullet=bullet;
+	}
+	
+
+	public void shoot() {
+		if(bullet>0) {
+			bullet--;
+			System.out.println(model+"을 쐈다. 빵야("+bullet+"발 남음)");
+		}else if(bullet==0) {
+			System.out.println(model+"을 못 쐇습니다.");
+		}
+	}
+	
+	public void reload(int bullet) {
+		int realbull=
+		if(this.bullet+bullet<FULL_BULLET) {
+			this.bullet+=bullet;
+			System.out.println(model+"("+bullet+"추가됨. 현재 "+this.bullet+" 발)");
+		}else {
+			
+		}
+		
+	}
+	
+	public void info() {
+		System.out.println(model+"("+bullet+"발 남아있음)");
+	}
+	
+	
+}

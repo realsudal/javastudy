@@ -1,0 +1,22 @@
+package ex02_String;
+
+public class Ex03_StringBuffer {
+
+	public static void main(String[] args) {
+		//java.lang.StringBuffer에 있음
+		
+		
+		/*StringBuffer 와 StringBuilder 는 하는일과 쓰는 것도 같지만
+		 * StringBuilder는 single thread 환경에서 사용하고(thread가 한개)
+		 * StringBuffer는 muliple thread 환경에서 사용한다 (thread가 여러개)  ==>thread safe한 클래스 이다.
+		 * 
+		 * -끝-
+		*/
+		
+		
+		
+		
+
+	}
+
+}

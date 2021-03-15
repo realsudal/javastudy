@@ -1,0 +1,25 @@
+package quiz06;
+
+public class Customer {
+
+	private int customerBread;
+	private int customerMoney;
+	
+	
+	//Customer customer = new Customer(20000);//가진돈
+	Customer(int customerMoney){
+		this.customerMoney=customerMoney;
+		
+	}
+	
+	//구매 메서드
+	//customer.buy(bakery1,10);//10개 구입
+	void buy(Bakery bakery,int customerBread) {
+		System.out.println(customerBread+"개 구입");
+	}
+	
+	
+	
+	
+	
+}

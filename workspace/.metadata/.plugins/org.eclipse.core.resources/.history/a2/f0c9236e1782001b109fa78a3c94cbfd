@@ -1,0 +1,12 @@
+package ex02_Method;
+
+public class Person {
+
+	String name;//null
+	int age;//0
+	char gender;// \n -> null문자
+	boolean isKorean;//false
+	
+	//메소드
+	
+}

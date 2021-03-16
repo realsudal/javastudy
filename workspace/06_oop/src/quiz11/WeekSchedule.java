@@ -33,14 +33,15 @@ public class WeekSchedule {
 			case 2: 
 				deleteSchedule();
 				break;
-				/*	case 3: 
+			case 3: 
 				updateSchedule();
 				break;
 			case 4: 
 				searchSchedule();
 				break;
 			case 5:
-				printAllSchedule();*/
+				printAllSchedule();
+				break;
 			case 0: 
 				exit();
 				return; //void의 반환타입은 return; 을 통해 메소드 종료할 수 있다.
@@ -50,23 +51,33 @@ public class WeekSchedule {
 			}
 		}
 	}
+	
+	//사용자 메뉴판
 	public void menu() {
 		System.out.println("====스케줄러====");
 		System.out.println("1. 스케줄 만들기");  
 		System.out.println("2. 스케줄 삭제하기");  
 		System.out.println("3. 스케줄 수정하기");  
-		System.out.println("4. 스케줄 삭제하기");  
+		System.out.println("4. 스케줄 조회");  
 		System.out.println("5. 전체 스케줄러 보기");
 		System.out.println("0. 프로그램 종료");  
 		System.out.println("===============");  
 	}
 	
 	
-	
+	//종료 메서드
 	public void exit() {
 		System.out.println("스케줄러 종료");
 		sc.close();
 	}
+	
+	
+	
+	
+	
+	
+	
+	//호출할 메소드들. . . 
 	
 	
 	/*
@@ -79,7 +90,7 @@ public class WeekSchedule {
 		System.out.print("스케줄 등록할 요일(일~토) 입력:");
 		String weekName=sc.next();
 		weekName=weekName.substring(0,1);// 	0<=추출할 문자열 <1 (=0번째 인데스만 추출!) : chartAt(0);을 쓰지않은 이유 ->char 타입이 아니라서 
-		sc.nextLine();//요일 뒤에 남아있는 엔터키 제거
+		sc.nextLine();//요일 뒤에 남아있는 엔터키 제거 (next만 하면 공백을 기준으로 받아들여서)
 		
 		for(int i=0;i<week.length;i++) {//7개 요일
 			if(weekNames[i].equals(weekName)) {//일치하는 요일 
@@ -91,10 +102,10 @@ public class WeekSchedule {
 				}else {
 					System.out.println(weekName+"요일은 이미 스케줄이 있다.");
 				}
-				break;//for문 종료 ->스케줄 작업 끝났으니까 
+				return;//for문 종료 ->스케줄 작업 끝났으니까 
 			}
-		}//for문
-		
+		}//for문 닫음
+		System.out.println("해당 요일은 존재하지 않습니다.");
 		
 	}//makeSchedule() 메서드 끝
 
@@ -104,7 +115,7 @@ public class WeekSchedule {
 		System.out.print("스케줄 삭제할 요일(일~토) 입력:");
 		String weekNamez=sc.next();//만약 '화요일' 이라고 입력을 했다면,
 		weekNamez=weekNamez.substring(0,1);// 	0<=추출할 문자열 <1 (=0번째 인데스만 추출!) : chartAt(0);을 쓰지않은 이유 ->char 타입이 아니라서 
-		sc.nextLine();//요일 뒤에 남아있는 엔터키 제거
+		sc.nextLine();//요일 뒤에 남아있는 엔터키 제거(엔터를 입력받는 메소드)
 		
 		for(int i=0;i<week.length;i++) {
 			if(weekNames[i].equals(weekNamez)) {
@@ -125,11 +136,95 @@ public class WeekSchedule {
 					
 				}
 				
-				
+				return;//첫 if문에 계속 다음 요일까지 비교하니까 ,컴퓨터 성능향상을 위해서 써줌 +또한 밑에  해당요일 걸러줄려고
 			}
 		}//for문 종료
+		System.out.println("해당 요일은 존재하지 않습니다.");
+		
+	}//메서드 닫음
+	
+	//스케줄 있으면 수정가능한 메서드
+	public void updateSchedule() {
+		System.out.println("========스케줄 수정==========");
+		System.out.print("스케줄 수정할 요일(일~토) 입력:");
+		String weekNamez=sc.next();//만약 '화요일' 이라고 입력을 했다면,
+		weekNamez=weekNamez.substring(0,1);// 	0<=추출할 문자열 <1 (=0번째 인데스만 추출!) : chartAt(0);을 쓰지않은 이유 ->char 타입이 아니라서 
+		sc.nextLine();//요일 뒤에 남아있는 엔터키 제거(엔터를 입력받는 메소드)
+		
+		for(int i=0;i<week.length;i++) {
+			if(weekNames[i].equals(weekNamez)) {//해당요일 찾기
+				
+				if(week[i].getSchedule()==null||week[i].getSchedule().isEmpty()) {//해당 요일이 비어있는지 확인 (비어있으면 실행)
+					System.out.println(weekNamez+"요일은 스케줄이 없습니다.");
+					System.out.println("새로운 스케줄을 등록하겠습니까 ? y/s");
+					String yesNo=sc.next();
+					sc.nextLine();//엔터로 입력 받음
+					if(yesNo.charAt(0)=='y'||yesNo.charAt(0)=='Y') {//char값이기 때문에 대 소문자 가림 
+						System.out.print(weekNamez+"요일 신규 스케줄 입력 :");
+						String schedule=sc.next();
+						week[i].setSchedule(schedule);
+						System.out.println(weekNamez+"요일에 수정 스케줄 등록완료");
+						
+					}else {
+						System.out.println("수정이 취소되었습니다");
+					}
+				}else {//스케줄이 비어있는지 확인 2 (채워져있으면 지울지 질문)
+					System.out.println(weekNamez+"요일의 스케줄을 확인합니다.");
+					System.out.println("["+week[i].getSchedule()+"]");
+					System.out.print("스케줄을 수정할까요? y/s:");
+					String yesNo=sc.next();
+					sc.nextLine();//엔터로 입력 받음
+					if(yesNo.charAt(0)=='y'||yesNo.charAt(0)=='Y') {
+						System.out.print(weekNamez+"요일 신규 스케줄 입력 :");
+						String schedule=sc.nextLine();
+						//sc.nextLine();
+						week[i].setSchedule(schedule);
+						System.out.println(weekNamez+"요일에 수정 스케줄 등록완료");
+					}else {
+						System.out.println("스케줄 등록 취소");
+					}
+				}return; //break;//첫 if문에 계속 다음 요일까지 비교하니까 ,컴퓨터 성능향상을 위해 
+			}
+		}
+		System.out.println("해당 요일은 존재하지 않습니다.");
+	
+	}//updateSchedule()메서드 닫음 
+	
+	
+	
+	
+	public void searchSchedule() {
+		System.out.println("========스케줄 조회==========");
+		System.out.print("스케줄 조회할 요일(일~토) 입력:");
+		String weekNamez=sc.next();//만약 '화요일' 이라고 입력을 했다면,
+		weekNamez=weekNamez.substring(0,1);// 	0<=추출할 문자열 <1 (=0번째 인데스만 추출!) : chartAt(0);을 쓰지않은 이유 ->char 타입이 아니라서 
+		sc.nextLine();//요일 뒤에 남아있는 엔터키 제거(엔터를 입력받는 메소드)
 		
 		
+		
+		for(int i=0;i<week.length;i++) {
+			
+			if(weekNames[i].equals(weekNamez)) {
+				System.out.println(weekNamez+"의 스케줄 입니다.");
+				week[i].info();
+				return;//searchSchedule() "메소드!!!"가 종료 
+				
+			}
+		
+		}
+		System.out.println("해당 요일은 존재하지 않습니다.");
+	}//searchSchedule() 메서드 닫음
+	
+	
+	
+	
+	public void printAllSchedule() {
+		System.out.println("========"+nthWeek+"주차 스케줄 조회==========");
+		for(int i=0;i<week.length;i++) {
+			System.out.print(weekNames[i]+"요일 스케줄");
+			week[i].info();
+			System.out.println(" ");
+		}
 	}
 	
 	

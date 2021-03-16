@@ -14,9 +14,9 @@ public class Day {
 	
 	public void info() {
 		if(schedule==null||schedule.isEmpty()) {//null또는 빈문자열이면 참
-			System.out.println("없음");
+			System.out.println("[ 없음  ]\t");
 		}else {
-			System.out.println(schedule);
+			System.out.println("[ "+schedule+" ]\t");
 		}
 	}
 }

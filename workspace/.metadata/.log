@@ -9127,3 +9127,6 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 !MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/sqltools/common/ui/actions/package-summary.html cannot be opened.
 !SUBENTRY 1 org.eclipse.help.base 4 4 2021-03-16 10:47:22.357
 !MESSAGE Help document /org.eclipse.datatools.doc.isv/html/reference/api/org/eclipse/datatools/connectivity/ui/wizards/package-summary.html cannot be opened.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-03-16 15:28:31.192
+!MESSAGE close() called when useCnt is already zero for Repository[D:\a_SJ_study\javastudy\.git\.git]

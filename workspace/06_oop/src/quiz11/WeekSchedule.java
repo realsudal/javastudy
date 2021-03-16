@@ -2,6 +2,7 @@ package quiz11;
 
 import java.util.Scanner;
 
+
 public class WeekSchedule {
 	private int nthWeek;
 	private Day[] week;
@@ -220,7 +221,7 @@ public class WeekSchedule {
 	
 	public void printAllSchedule() {
 		System.out.println("========"+nthWeek+"주차 스케줄 조회==========");
-		for(int i=0;i<week.length;i++) {
+		for(int i=0;i<week.length;i++) { 
 			System.out.print(weekNames[i]+"요일 스케줄");
 			week[i].info();
 			System.out.println(" ");

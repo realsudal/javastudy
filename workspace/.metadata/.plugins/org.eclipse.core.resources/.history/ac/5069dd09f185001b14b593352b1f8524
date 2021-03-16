@@ -1,0 +1,95 @@
+package quiz11;
+
+import java.util.Scanner;
+
+public class WeekSchedule {
+	private int nthWeek;
+	private Day[] week;
+	private String[] weekNames= {"일","월","화","수","목","금","토"};
+	Scanner sc=new Scanner(System.in);
+	
+	public WeekSchedule(int nthWeek) {
+		this.nthWeek=nthWeek;
+		week=new Day[7];
+		
+		for(int i=0;i<week.length;i++) {//7개의 객체를 미리 만들어줌
+			week[i]=new Day();
+			}
+	}
+	
+	//메서드
+	
+	//1.run
+	public void run() {
+		while (true) {
+			menu();
+			System.out.print("작업 선택 : ");
+			int choice=sc.nextInt();
+			sc.nextLine();//choice 입력 뒤에 남아있는 엔터를 제거하기 위한 코드
+			switch(choice) {
+			case 1: 
+				makeSchedule();
+				break;
+			case 2: 
+				deleteSchedule();
+				break;
+			case 3: 
+				updateSchedule();
+				break;
+			case 4: 
+				searchSchedule();
+				break;
+			case 5:
+				printAllSchedule();
+			case 0: 
+				exit();
+				return; //void의 반환타입은 return; 을 통해 메소드 종료할 수 있다.
+			default:
+				System.out.println("없는 작업입니다. 다시 입력해주세요.");
+				
+			}
+		}
+	}
+	public void menu() {
+		System.out.println("====스케줄러====");
+		System.out.println("1. 스케줄 만들기");  
+		System.out.println("2. 스케줄 삭제하기");  
+		System.out.println("3. 스케줄 수정하기");  
+		System.out.println("4. 스케줄 삭제하기");  
+		System.out.println("5. 전체 스케줄러 보기");
+		System.out.println("0. 프로그램 종료");  
+		System.out.println("===============");  
+	}
+	
+	
+	
+	public void exit() {
+		System.out.println("스케줄러 종료");
+		sc.close();
+	}
+	
+	
+	public void makeSchedule() {
+		System.out.println("===스케줄 만들기===");
+		System.out.print("스케줄 등록할 요일(일~토) 입력:");
+		String weekName=sc.next();
+		for(int i=0;i<week.length;i++) {//7개 요일
+			if(weekNames[i].equals(weekName)) {//일치하는 요일 
+				if(week[i].getSchedule()==null||week[i].getSchedule().isEmpty()) {//일정이 비었는지 확인 후 입력받음
+					System.out.print(weekName+"요일의 신규 스케줄  입력:");
+					String schedule=sc.nextLine();
+					week[i].setSchedule(schedule);
+					System.out.println(weekName+"요일에 스케줄 등록 완료");
+				}else {
+					System.out.println(weekName+"요일은 이미 스케줄이 있다.");
+				}
+			}
+		}
+	}
+
+
+}
+
+
+
+

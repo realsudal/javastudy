@@ -1,0 +1,10 @@
+package quiz11;
+
+public class WeekSchedule {
+	private int nthWeek;
+	private Day[] week;
+	private String[] weekNames= {"일","월","화","수","목","금","토"};
+	
+	
+	
+}

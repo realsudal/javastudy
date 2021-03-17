@@ -27,9 +27,9 @@ public class Seat {
 	//좌석확인
 	public void info() {
 		if(name==null) {
-			System.out.println("예매가능");
+			System.out.print("예매가능");
 		}else {
-			System.out.println(name);
+			System.out.print(name.charAt(0)+"*"+(name.length()>2 ? name.charAt(name.length()-1): " "));
 		}
 	}
 	

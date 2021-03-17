@@ -16,6 +16,7 @@ public class WeekSchedule {
 		for(int i=0;i<week.length;i++) {//7개의 객체를 미리 만들어줌
 			week[i]=new Day();
 			}
+		
 	}
 	
 	//메서드

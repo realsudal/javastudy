@@ -1,0 +1,68 @@
+깃은
+    vcs => verson control system =>버전관리 시스템
+	~ : 틸트 (:현재 작업경로)
+	pwd:현재 작업 경로 명령어
+
+깃(로컬저장소) vs 깃허브(원격저장소)
+ㄴ 추적능력
+
+편집기로 뭐쓸거냐
+vim == 메모장
+
+
+
+0.사용자등록
+git config --global user.name 'sudal'
+git config --global user.email 'pnjpass@naver.com'
+
+
+
+-순서
+
+1.로컬 저장소 만들기
+	* 로컬 저장소 : d:/spring0303/javastudy
+	1) 이동 :cd D:\a_SJ_study
+	2) 로컬 저장소 등록 명령 : git init
+		=>로컬 저장소로 등록되면 .git이라는 이름의 숨김폴더가 생성됨
+
+
+2.스태이징하기
+	:무대에 올리는 것 
+	방법1) 골라서 스테이징 : git add 소스코드 attach.zip
+	방법2) 전체 스테이징 : git add . <-. 전부추적 ☆	1		
+
+3.커밋하기
+	:로컬저장소에 저장하는 개념
+	반드시 "커밋 메시지"를 작성해야함
+	예) [01]main: add 블라블라.java modify xxxx.java
+	1) git commit
+	2)vim이 열림  ->여기에 메시지 작성 하고 빠져나옴 
+	*간단한 메시지의 경우 : git commit -m '커밋 메시지'   	
+		ex) git commit -m'[03]main:gitignore'☆2    ||  git commit -am 'zzz' <-add와 commit을 한방에~!(최초작업때는 불가)
+
+4)깃허브 회원가입 및 로그인
+
+5) 깃허브 - create repository :원격 저장소 생성하기
+	이름: javastudy
+	옵션
+		1.add README.md
+		2.add .gitignore => template(java)
+
+6)원격 저장소 주소
+	https://github.com/realsudal/javastudy.git
+
+7) 로컬저장소(D:\a_SJ_study\javastudy)의 원격 저장소(=origin) 등록하기
+	#로컬저장소 -> 원격저장소 (git push)
+	#로컬저장소 <- 원격저장소 (git pull)
+
+8)최초 로컬저장소와 원격 저장소를 연결하려면
+	1.pull을 먼저!!!하고  : git push origin main	☆3
+	2.push를 나중에 함
+
+
+' https://www.toptal.com/developers/gitignore '
+
+
+
+
+

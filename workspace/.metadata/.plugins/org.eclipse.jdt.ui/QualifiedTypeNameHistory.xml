@@ -1,18 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.lang.Double"/>
-<fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
-<fullyQualifiedTypeName name="java.util.Random"/>
-<fullyQualifiedTypeName name="java.lang.SuppressWarnings"/>
-<fullyQualifiedTypeName name="java.lang.StringBuffer"/>
-<fullyQualifiedTypeName name="java.lang.StringBuilder"/>
-<fullyQualifiedTypeName name="Ex03_api.Ex04_calender"/>
-<fullyQualifiedTypeName name="javax.xml.ws.Holder"/>
-<fullyQualifiedTypeName name="org.omg.PortableInterceptor.SYSTEM_EXCEPTION"/>
-<fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
-<fullyQualifiedTypeName name="java.lang.Integer"/>
-<fullyQualifiedTypeName name="ex01_user_type.MainClass"/>
-<fullyQualifiedTypeName name="ex01_user_type.Person"/>
 <fullyQualifiedTypeName name="Quiz01.Book"/>
 <fullyQualifiedTypeName name="java.sql.Date"/>
 <fullyQualifiedTypeName name="java.util.Calendar"/>
@@ -55,9 +42,22 @@
 <fullyQualifiedTypeName name="quiz11.Day"/>
 <fullyQualifiedTypeName name="java.util.Scanner"/>
 <fullyQualifiedTypeName name="java.lang.System"/>
-<fullyQualifiedTypeName name="java.lang.String"/>
 <fullyQualifiedTypeName name="quiz12.Consert"/>
 <fullyQualifiedTypeName name="quiz12.SeatGroup"/>
 <fullyQualifiedTypeName name="java.util.Arrays"/>
 <fullyQualifiedTypeName name="quiz12.Seat"/>
+<fullyQualifiedTypeName name="javax.print.DocFlavor.STRING"/>
+<fullyQualifiedTypeName name="quiz01.Salaryman"/>
+<fullyQualifiedTypeName name="quiz01.SalesMan"/>
+<fullyQualifiedTypeName name="java.sql.Time"/>
+<fullyQualifiedTypeName name="quiz01.Staff"/>
+<fullyQualifiedTypeName name="quiz01.Alba"/>
+<fullyQualifiedTypeName name="ex08_casting.Tv"/>
+<fullyQualifiedTypeName name="ex08_casting.Elec"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="java.lang.Enum"/>
+<fullyQualifiedTypeName name="java.lang.Override"/>
+<fullyQualifiedTypeName name="ex09_upCasting.Espresso"/>
+<fullyQualifiedTypeName name="ex09_upCasting.coffee"/>
+<fullyQualifiedTypeName name="ex09_upCasting.Latte"/>
 </qualifiedTypeNameHistroy>

@@ -12,7 +12,15 @@ public abstract class Fighter {
 		this.name = name;
 		this.energy = energy;
 		this.power = power;
+		this.isAlive=true;
 	}
+	
+	
+	//메서드
+	public abstract  void attack(Fighter fighter) {
+		
+	}
+	
 	
 	
 }

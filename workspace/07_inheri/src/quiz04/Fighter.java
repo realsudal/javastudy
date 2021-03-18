@@ -11,7 +11,7 @@ public abstract class Fighter {
 		super();
 		this.name = name;
 		this.energy = energy;
-		this.power = power;
+		this.power = power; 
 		this.isAlive=true;
 	}
 	

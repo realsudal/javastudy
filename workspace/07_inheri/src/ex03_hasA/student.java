@@ -6,7 +6,7 @@ sys.stdin=open("input2.txt","rt")
 
 n=int(input())
 a=list(map(int,input().split()))
-avg=round(sum(a)/n)
+avg=round(sum(a)/n)  
 min=5000000
 for index,value in enumerate(a):
     res=abs(value-avg)

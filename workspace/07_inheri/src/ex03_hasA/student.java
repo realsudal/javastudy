@@ -15,7 +15,7 @@ for index,value in enumerate(a):
         score=value
         dex=index+1
     elif res==min:
-        if score<value:
+        if score<value: 
             score=value
             dex=index+1
 print(avg,dex,sep=' ')        

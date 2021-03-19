@@ -1,5 +1,5 @@
 package quiz05;
 
-public class Marine {
+public class Marine implements Terran {
 
 }

@@ -1,5 +1,5 @@
 package quiz05;
 
-public class Tank {
+public class Tank implements Terran {
 
 }

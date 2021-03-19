@@ -1,5 +1,5 @@
 package quiz05;
 
-public class Firebat {
+public class Firebat implements Terran {
 
 }

@@ -13,7 +13,6 @@ INDEX VERSION 1.131+D:\sj_spring0303\javastudy\workspace\.metadata\.plugins\org.
 1165219157.index
 3433509804.index
 830964619.index
-2752941641.index
 3127728267.index
 1703370312.index
 2814522370.index

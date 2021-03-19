@@ -1,0 +1,39 @@
+package ex13_interface;
+/*
+ * 	인터페이스는 본문이 없는 추상클래스만 가지고있다!
+ * 	따라서 해당 추상메소드를 반드시 오버라이드 해야한다.
+ * 
+ * 
+ * 클래스를 상속 받을때는 extends를 사용하고,
+ *	인터페이스를 구현할때는  implements를 사용한다.
+ *
+ *
+ *	클래스를 상속 받는다 == 인터페이스를 구현한다.
+ */
+public abstract class Ractangle  implements Shape {
+	private int width;//너비
+	private int height;
+	
+	//생성자
+	public Ractangle(int width, int height) {
+		super();
+		this.width = width;
+		this.height = height;
+	}
+	//게터 세터
+	public int getWidth() {
+		return width;
+	}
+	public void setWidth(int width) {
+		this.width = width;
+	}
+	public int getHeight() {
+		return height;
+	}
+	public void setHeight(int height) {
+		this.height = height;
+	}
+	
+	
+	
+}

@@ -2,34 +2,24 @@ package quiz06;
 
 public class Customer {
 
-	private int customerBread;
-	private int customerMoney;
-	Bakery bakery;
-	
-	
-	//Customer customer = new Customer(20000);//가진돈
-	Customer(int customerMoney){
-		this.customerMoney=customerMoney;
+	// field
+		private int customerBread;
+		private int customerMoney;
 		
-	}
-	
-	
-	
-	
-	//구매 메서드
-	//customer.buy(bakery1,10);//10개 구입
-	void buy(Bakery bakery,int money) {
-		BreadAndChnage bnc=bakery.sell(money);
+		// constructor
+		public Customer(int customerMoney) {
+			this.customerMoney = customerMoney;
+		}
 		
-		
-		customerBread+=(bnc.getBread());
-		customerMoney+=(bnc.getChange());
-		//다른 클래스 호출해서 넣어줌
-		System.out.println(this.bakery+"에서 "+customerBread+"개 구입");
-	}
-	
-	
-	
-	
+		// method
+		public void buy(Bakery bakery, int money) {
+			// bakery에서 판매한 빵과잔돈을 받으면 됩니다.
+			BreadAndChange bnc = bakery.sell(money);
+			// 구매처리
+			customerBread += (bnc.getBread());
+			customerMoney += (bnc.getChange());
+			customerMoney -= money;
+			System.out.println("빵 " + customerBread + "개, 남은돈 " + customerMoney + "원");
+		}
 	
 }

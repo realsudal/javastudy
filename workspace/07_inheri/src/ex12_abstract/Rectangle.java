@@ -1,11 +1,11 @@
 package ex12_abstract;
 
-public abstract class Ractangle  extends Shape {
+public class Rectangle  extends Shape {
 	private int width;//너비
 	private int height;
 	
 	//생성자
-	public Ractangle(int width, int height) {
+	public Rectangle(int width, int height) {
 		super();
 		this.width = width;
 		this.height = height;

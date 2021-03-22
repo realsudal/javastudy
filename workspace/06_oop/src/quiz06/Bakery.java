@@ -3,47 +3,41 @@ package quiz06;
 import javax.swing.text.AbstractDocument.BranchElement;
 
 public class Bakery {
-	private int breadCount;
-	private int breadPrice;
-	private int bakeryMoney;
-	
-	
-	Bakery(int breadCount,int breadPrice,int bakeryMoney) {
+	// field
+		private int breadCount;
+		private int breadPrice;
+		private int bakeryMoney;
 		
-		this.breadCount=breadCount;
-		this.breadPrice=breadPrice;
-		this.bakeryMoney=bakeryMoney;
+		// constructor
+		public Bakery(int breadCount, int breadPrice, int bakeryMoney) {
+			this.breadCount = breadCount;
+			this.breadPrice = breadPrice;
+			this.bakeryMoney = bakeryMoney;
+		}
 		
-	}
-	
-	
-	//1. 판매 메소드
-	void sell(int money) {
-		//판매 빵 개수
-		int sellBread=money/breadPrice;
-		//잔돈
-		int change=money%breadPrice;
+		// method
 		
-		//고객에게 돌려줄 빵과 잔돈
-		BreadAndChnage bnc=new BreadAndChnage(sellBread,change);
+		// 1. 판매 메소드
+		// 1) 결과타입 : BreadAndChange
+		// 2) 메소드명 : sell
+		// 3) 매개변수 : int money
+		public BreadAndChange sell(int money) {
+			// 판매빵개수
+			int sellBread = money / breadPrice;
+			// 잔돈
+			int change = money % breadPrice;
+			// 고객에게 돌려줄 BreadAndChange 생성
+			BreadAndChange bnc = new BreadAndChange(sellBread, change);
+			// Bakary의 판매처리
+			bakeryMoney += (money - change);
+			breadCount -= (sellBread);
+			// 고객에게 빵과잔돈 전달
+			return bnc;
+		}
 		
-		//Bekery의 판매처리
-		bakeryMoney+=(money -change);
-		breadCount-=(sellBread);
-		//고갹에게 빵과 잔돈 전달
-		return bnc;
-		
-		
-	}
-	
-	//2. 정보 출력 info메서드
-	void info() {
-		//손님 메서드에서 빵개수 받아와 몇개 남앗았는지 체크
-		System.out.println("빵"+breadCount+"개, 자본금 "+bakeryMoney+"원");
-	}
-	
-	void
-	
-	
+		// 2. info
+		public void info() {
+			System.out.println("빵 " + breadCount + "개, 자본금 " + bakeryMoney + "원");
+		}
 	
 }

@@ -20,7 +20,8 @@ public class Main {
 		 */
 		
 		if(p1.equals(p2)) {	//equals는 Object 클래스의 메소드라 어느 클래스에서든 다 사용가능~ ㅋ
-							//또한Object의 equals 메소드는 값을 비교하지 않고, 저장된 주소의 객체인지를 구분함(=객체의 주소)
+							//또한Object의 equals 메소드는 값을 비교하지 않고, 저장된 주소의 객체인지를 구분함(=객체의 주소) -> 결과 거짓
+							//BUT!!! Product.java에서 끌어올 메소드 equals를 사용하면 -> 결과 : 참
 			System.out.println("같은 종류 제품");
 		}else {
 			System.out.println("다른 종류 제품");

@@ -3,30 +3,25 @@ package quiz02;
 public class Main {
 
 	public static void main(String[] args) {
-		//월급쟁이
-		Salaryman s1=new Salaryman("yan",5000);
-		
-		System.out.println(s1.getName());
-		System.out.println(s1.getPay());
-		
-		SalesMan s2=new SalesMan("mo", 20000);
-		s2.setSalesAmount(50000);
-		
-		Alba s3=new Alba("alba", 10000);
-		s3.setTimes(200);
-		System.out.println(s3.getName());
-		System.out.println(s3.getpay());
-		
-		
-		
-		Company c1=new Company(10);
-		
-		//업캐스팅이 이루어짐~~!
-		Company.hireStaff(s1);//셀러리맨이 스
-		Company.hireStaff(s2);									//staff에 인포 메서드가 잇지만 하위 클래스들에는 없어서 오버라이딩 시켜줘야됨.
-		Company.hireStaff(s3);
-		Company. staffInfo();
-		
+			// 월급쟁이
+				SalaryMan staff1 = new SalaryMan("james", 300);
+				
+				// 판매직
+				SalesMan staff2 = new SalesMan("alice", 100);
+				staff2.setSalesAmount(2000);
+				
+				// 알바
+				Alba staff3 = new Alba("david");
+				staff3.setPayPerHour(1);
+				staff3.setTimes(200);
+				
+				// 회사
+				Company company = new Company(10);
+				company.hireStaff(staff1);
+				company.hireStaff(staff2);
+				company.hireStaff(staff3);
+				company.staffInfo();
+				
 	}
 
 }

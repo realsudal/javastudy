@@ -10,17 +10,25 @@ package ex13_interface;
  *
  *	클래스를 상속 받는다 == 인터페이스를 구현한다.
  */
-public abstract class Ractangle  implements Shape {
-	private int width;//너비
-	private int height;
+public class Rectangle implements Shape {  // extends <-> implements
+
+	// field
+	private int width;  // 너비
+	private int height;  // 높이
 	
-	//생성자
-	public Ractangle(int width, int height) {
+	// constructor
+	public Rectangle(int width, int height) {
 		super();
 		this.width = width;
 		this.height = height;
 	}
-	//게터 세터
+	
+	// method
+	@Override
+	public double getArea() {
+		return width * height;
+	}
+	
 	public int getWidth() {
 		return width;
 	}
@@ -33,7 +41,5 @@ public abstract class Ractangle  implements Shape {
 	public void setHeight(int height) {
 		this.height = height;
 	}
-	
-	
-	
+
 }

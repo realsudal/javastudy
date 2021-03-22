@@ -1,6 +1,6 @@
 package ex12_abstract;
 //정사각형
-public abstract class Square extends Rectangle {
+public class Square extends Rectangle {
 
 	// field가 없습니다.
 	

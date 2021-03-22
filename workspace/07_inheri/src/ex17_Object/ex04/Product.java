@@ -34,7 +34,7 @@ public class Product {
 			 * p1의 모델 : model(= this.model)
 			 * p2의 모델 : p.model
 			 */
-			if(model.equals(p.model)&& manufacture.equals(p.manufacture)) { //string의 equals를 사용 //obj.model 안되나?
+			if(model.equals(p.model)&& manufacture.equals(p.manufacture)) { //string의 equals를 사용 //obj.model 안되나?->객체가 아니라 변수라? 
 				return true;
 			}else {
 				return false;

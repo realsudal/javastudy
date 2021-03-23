@@ -35,8 +35,50 @@ package ex09_hash;
 public class HashCodeMain {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
+		
+		
+		Integer a=10;
+		System.out.println(a.hashCode());
+		
+		Double b=1.5;
+		System.out.println("b의 해시코드 : "+ b.hashCode());
+		
+		String str="hello";
+		System.out.println("str의 해시코드 : "+str.hashCode());
+		
+		
+		//결론 : 내장된 클래스 타입의 객체들은 나름의 해시태그가 있다.
+		
+		Dog dog=new Dog();
+		Cat cat=new Cat();
+		
+		System.out.println(dog); //- 주소
+		System.out.printf("%x \n",dog.hashCode());//object의 해쉬코드 - 주소
+		
+		System.out.println(cat);
+		System.out.printf("%x \n",cat.hashCode());//object의 해쉬코드
+		
+		
+		//결론 : object의 hashcode 는 객체의 메모리 주소를 반환한다.
+		
+		
+		/*
+		   <hashset과 hashmap의 공통점>
+		 		ㄴ 중복이 불가능한 데이터가 있음.
+		 		
+		 	->중복확인 방법
+		 			ㄴ 1) 해시코드 확인(hashCode())함.해시코드가 같아야 다음단계를 실행
+		 			ㄴ 2) 실제로 같은지 비교한다. (equals()메서드로)
+		 			ㄴ 3) 그 결과가 같으면 "중복 데이터" 가 있는 것으로 판단함
+		 */
+		
+		
+		
+		
 	}
 
 }
+
+class Dog{} //아무것도 안들어있으니 object
+class Cat{}	//아무것도 안들어있으니 object

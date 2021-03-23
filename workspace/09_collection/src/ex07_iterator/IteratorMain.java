@@ -10,7 +10,7 @@ public class IteratorMain {
 /*
  * Interator 인터페이스
  * 	1.collection(List,Set)을 순회하는 경우에 사용
- * 2."반복자"라고ㅓ함
+ * 2."반복자"라고 함
  * 3. 순회를 하고자 하는 Collection에 iterator() 메소드를 부착해서 생성합니다.
 	4. 인덱스 유무와 상관없이 사용합니다.
  */

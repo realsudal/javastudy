@@ -33,6 +33,27 @@ public class LoopForHashMap {
 			String value=me.get(key);
 			System.out.println(key+":"+value);
 		}
+		
+		
+		/*3, 데이터 쌍 (pair)으로 뺄 수 있습니다.
+		 * enty : key와 value를 묶어서 entry라고 합니다.
+		 * key : getkey()
+		 * value : getValue()
+		 */
+
+		
+		Set<Map.Entry<String,String>> enstrys = me.entrySet();
+		
+		//1.for
+		for(Map.Entry<String,String> entry:enstrys) {
+			String key=entry.getValue();
+			string value=entry.getValue();
+			System.out.println(key + ":"+ value);
+		}
+		//2.iterator
+		Iterator<Map.Entry<String, String>
+		
+		
 	}
 	
 

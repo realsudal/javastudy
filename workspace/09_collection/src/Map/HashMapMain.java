@@ -31,7 +31,7 @@ public class HashMapMain {
 		//2.삭제 : .remove(key)
 		score.remove("근력");
 		
-		//3. 요소 가져오기 : .get(key)
+		//3. 요소(=값) 가져오기 : .get(key)
 		System.out.println("지구력 : "+score.get("지구력"));
 		System.out.println("인내력 : "+score.get("인내력"));
 		

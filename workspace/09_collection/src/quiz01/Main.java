@@ -28,7 +28,7 @@ public class Main {
 		
 		
 		List<Member> members=new ArrayList<Member>();
-		System.out.println("회원님의 번호를 입력하세요 : ");
+		System.out.print("회원님의 번호를 입력하세요 : ");
 		int mNo=sc.nextInt();
 		
 		int removeIdx=-1;//삭제할 회원의 인덱스

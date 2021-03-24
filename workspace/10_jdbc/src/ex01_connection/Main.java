@@ -3,7 +3,6 @@ package ex01_connection;
 import java.sql.Connection;
 import java.sql.DriverManager;
 
-import javax.swing.Spring;
 
 public class Main {
 
@@ -29,7 +28,7 @@ public class Main {
 		
 		//5.접속을 종료시킴
 		con.close();
-		}catch (ClassNotFoundException e) {
+		}catch (Exception e) {
 			e.printStackTrace();
 		}
 		

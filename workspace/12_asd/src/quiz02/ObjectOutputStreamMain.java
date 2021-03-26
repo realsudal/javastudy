@@ -26,7 +26,7 @@ public class ObjectOutputStreamMain {
 		}catch (Exception e) {
 			e.printStackTrace();
 		}finally {
-			try {
+			try { 
 				if(oos!=null)oos.close();
 			}catch (Exception e) {
 				e.printStackTrace();

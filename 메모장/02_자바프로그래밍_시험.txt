@@ -1,0 +1,61 @@
+프로그래밍 언어 활용
+
+1. 서술형 : 30점 (5점*6개)
+	1) 언어 번역기,번역과정
+		-컴파일러(외국책을 번역) = 완성된 소스코드를 한번에 번역 - 자바
+		-인터프리터(동시통역관) = 코드 한줄씩 바로 번역
+	2) 라이브러리 >  패키지 > 모듈
+		-모듈 : 개별 파일
+		-패키지 : 모듈이 모인 디렉토리
+		-라이브러리 :( 패키지+모듈 )의 모음
+	3) 메소드와 함수의 차이
+		-메소드 : 클래스 내부에 있는 함수
+		-함수 : 클래스 외부에 있는 함수
+	4) 클래스와 객체 차이
+		-클래스 :  설계도 - 붕어빵 만드는 기계
+		-객체 : 설계도로 만든 제품	- 붕어빵
+	5) 메소드
+		-오버로드 : 매개변수의 타입과 갯수가 다르면 이름이 같아도 다른 클래스 ex)println()
+		-오버라이드 : 부모클래스로부터 상속받은 메소드를 같은 모습으로 자식클래스에서 재정의하는 것
+	6) 추상클래스와 인터페이스
+		-추상클래스 : 추상 메서드가 하나이상 존재하는 클래스 (extends(상속)를 받음)- 특징 : 객체 생성이 불가능
+		-인터페이스 : 전부 추상 메서드인 클래스(static,default) (구현을함 elements) - 특징 : 객체 생성이 불가능
+		-인터페이스 구현 클래스 : 모든 추상 메소드를 반드시 오버라이드해야함 (전~~~~~부다)
+	7)import
+		-java.lang 패키지 이외의 패키지에 존재하는 모든 클래는 import가 필요하다. 
+		-ex ) java.util.Scanner, java.util.Array, java.util.Date . . .
+	
+
+2. 실기형 : 70점(1문제) - 아래 4개 클래스
+
+jdbc 활용한 도서관리 프로그램(클래스 이름보고 구현하기)
+	1)Dto ==valueObject (vo)
+	2)Dao 
+	3) Library Program (StaffManager)
+	4)main
+
+워크스페이스 c:/exam으로 변경 (file ->  switch workspace ->  c:/exam으로 변경)->글꼴 테마 인코딩 다시 작업해야됨
+프로젝트에 ojbc6.jar build path잡는법!!!!!!!꼭알기
+문제에서 book.sql 파일 제공하면 거기에 작성된 쿼리문을 실행시키는게 문제. (오라클 디벨로퍼 이용해서 spring 계정에 만듦)
+
+	----------------------
+	DB: Book테이블 
+		bookNo,bookTitle,bookWriter,pubDate
+		number,varchar2,varchar2, date
+
+	BookDto ==BookVo
+	class BookDto{
+	
+		int bookNo;
+		String bookTitle;
+		String bookWriter;
+		Date pubDate; //여기 date는 sql용으로 임포트 해야됨
+	}
+
+	//디폴트 생성자 꼭! 쓸수있어야됨!!!! 방법1) 안만들기 방법2)만들기
+	public BookDto(){ }
+
+	//게터 세터만들기
+
+
+

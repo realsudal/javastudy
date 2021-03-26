@@ -28,10 +28,12 @@ public class FileWriterMainClass {
 			char[] cbuf = {'H', 'e', 'l', 'l', 'o'};
 			String str = " Java";
 			int ch = '!';
+			String str2="nice to meet you";
 			// text1.txt 파일로 데이터 전송하기
 			fw.write(cbuf);
 			fw.write(str);
 			fw.write(ch);
+			fw.write('\n'); //줄바꿈을 직접 넣어줘야함.
 			System.out.println("text1.txt 파일이 생성되었습니다.");
 		} catch (IOException e) {
 			e.printStackTrace();

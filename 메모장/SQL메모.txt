@@ -1,0 +1,36 @@
+oracle.jdbc.driver.OracleDriver  >> 오라클 드라이버의 이름! 앞에는 다 패키지
+
+
+java.sql.Connection 클래스 : Oracle 접속 담당
+java.sql.PreparedStatement 클래스 : 쿼리문 실행 담당
+java.sql.ResultSet 클래스 : 레코드 저장
+
+row행 : 레코드,튜플
+column열 :필드,속성
+
+
+SQL ->  String sql ="작성";
+Oracle 쿼리문은 마지막에 ; 넣음
+String sql문은 ; 없음!!!
+
+SQL
+ CREATE TABLE 테이블명 (칼럼 타입 제약조건 ...);
+ DROP TABLE 테이블명;
+
+<밑에 애들은 꼭외우자.>
+C INSERT INTO 테이블명(칼럼1,칼럼2,칼럼3) VALUES (값1,값2,값3);
+R SELECT 칼럼,칼럼,... FROM 테이블 WHERE 조건식;  <-WHERE 는 안써도댐  =>>>ResultSet 클래스 활용 
+U UPDATE 테이블 SET 업데이트내용 WHERE 조건식; 
+D DELETE FROM 테이블 WHERE 조건식; 
+
+dml insert,update,delete
+dql select
+
+getInt(1)
+getInt("no")
+
+getString(2)
+getString("name")
+
+getDate(4)
+getDate("hireDate")

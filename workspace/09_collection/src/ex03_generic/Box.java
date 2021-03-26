@@ -23,7 +23,7 @@ public class Box<T> {
 	
 	@Override
 	public String toString() {
-		String result="";
+		String result=""; //[result는 문자열 형식]선언
 		for(T item:items) {
 			if(item!=null) {
 				result+=item.toString(); 	//	item.toString(); 은 Fruit의 toString()

@@ -18,6 +18,7 @@ public class FIleDelete_Main {
 	
 		//파일과 폴더 삭제
 		if(dir.exists()==true) {
+			
 			File[] files=dir.listFiles();
 			for(File file : files) {
 				if(file.isFile()) {
@@ -27,6 +28,7 @@ public class FIleDelete_Main {
 					System.out.println(file.getName()+"디렉터리를 삭제합니다.");
 				}
 			}
+			
 			dir.delete();
 			System.out.println(dir+"가 디렉토리가 삭제되었습니다.");
 		}

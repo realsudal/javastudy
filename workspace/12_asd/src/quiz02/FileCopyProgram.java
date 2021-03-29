@@ -1,40 +1,39 @@
 package quiz02;
-
 import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 
 public class FileCopyProgram {
 
 	public static void main(String[] args) {
-		BufferedInputStream bis=null;
-		FileInputStream fis=null;
-		FileInputStream fis=null;
-
-	 	int bf=BufferedInputStream(FileOutputStream fos=null);
+		
+		BufferedInputStream bis = null;
+		BufferedOutputStream bos = null;
 		
 		try {
-			bio=new FileInputStream("Ocean - 62249.mp4");//원본
-			bos=new FileOutputStream("Ocean - 622492.mp4");//복사본
-			byte[] b=new byte[1024]; //1kb
-			while(true) {
-				int readByte=fis.read(b); //영상 저장은 b, 실제 읽은 바이트 수는 readbyte[]에 저장
-				if(readByte==-1) {
+			bis = new BufferedInputStream(new FileInputStream("Windmill.mp4"));  // 원본
+			bos = new BufferedOutputStream(new FileOutputStream("Windmill2.mp4"));  // 복사본
+			byte[] b = new byte[1024];  // 1KB
+			while (true) {
+				int readByte = bis.read(b);  // 영상 저장은 b, 실제 읽은 바이트수는 readByte
+				if (readByte == -1) {
 					break;
 				}
-				fos.write(b, 0, readByte);
+				bos.write(b, 0, readByte);
 			}
-			System.out.println("파일이 복사됨");
-		}catch (Exception e) {
+			System.out.println("Windmill.mp4 파일이 복사되었습니다.");
+		} catch (Exception e) {
 			e.printStackTrace();
-		}finally {
+		} finally {
 			try {
-			if(fos!=null)fos.close();
-			if(fis!=null)fis.close();
-			}catch (Exception e) {
-				// TODO: handle exception
+				if (bos != null) { bos.close(); }
+				if (bis != null) { bis.close(); }
+			} catch (Exception e) {
+				e.printStackTrace();
 			}
 		}
-		
+
 	}
+
 }

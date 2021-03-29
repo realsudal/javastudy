@@ -1,29 +1,31 @@
 package quiz;
 
-import java.io.BufferedOutputStream;
 import java.io.DataInputStream;
 import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.util.Scanner;
+
+// score.dat 파일을 읽어서 저장을 확인하시오.
 
 public class Main2 {
-// 확인
+
 	public static void main(String[] args) {
-		try(DataInputStream dis=new DataInputStream(new FileInputStream("score.dat"))){
-			String name=dis.readUTF();
-			int[] scores=new int[4];
-			for(int i=0;i<scores.length;i++) {
-				scores[i]=dis.readInt();
-				System.out.println(scores[i]+"");
-				
+		
+		try (DataInputStream dis = new DataInputStream(new FileInputStream("score.dat"))) {
+			
+			int[] scores = new int[dis.readInt()];
+			String name = dis.readUTF();
+			System.out.println("이름: " + name);
+			for (int i = 0; i < scores.length; i++) {
+				scores[i] = dis.readInt();
+				System.out.print(scores[i] + " ");
 			}
 			System.out.println();
-			double ave=dis.readDouble();
-			System.out.println("평균 : "+avg);
-		}catch (Exception e) {
+			double ave = dis.readDouble();
+			System.out.println("평균: " + ave);
+			
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
+
 	}
 
 }

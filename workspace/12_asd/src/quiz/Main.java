@@ -1,47 +1,44 @@
 package quiz;
-/*
- * 사용자로 부터 국,영,수 점수를 입력받은 뒤 
- * int[]배열에 저장
- * score.dat 파일에 이름,입력받은 점수,평균을 저장하시오.
- * 저장이 끝나면 score.dat 파일을 읽어서 저장을 확인하시오.
- */
 
-import java.io.BufferedInputStream;
-import java.io.BufferedOutputStream;
-import java.io.FileInputStream;
+ import java.io.DataOutputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Scanner;
 
-//저장
-public class Main {
+// 사용자로부터 국, 영, 수 점수를 입력 받은 뒤,
+// int[] 배열에 저장한다.
+// score.dat 파일에 이름, 입력 받은 점수, 평균을 저장하시오.
+
+public class Main{
 
 	public static void main(String[] args) {
-
-		Scanner sc=new Scanner(System.in);
 		
-		String[] sub= {"국","영","수"};
-		int[] score=
-		for(int i=0;i<sub.length;i++) {
-			System.out.println(sub[i]+">>");
-			score[i]=sc,nextInt();
-			total+=score[i];
-		}
-		avg+=scores[i];
-	}
-	try(BufferedInputStream bis=new BufferedInputStream(new FileInputStream("byte2.txt"))){
-		byte[] bytes=new byte[5];
-		while(true) {
-			int readByte=bis.read(bytes); //'읽은 데이터는 bytes 배열'에 저장됨. 실제'읽은 바이트 수가 readByte'에 저장됨
-			if(readByte==-1)break;
-			else {
-				return 0;
-		}
-		System.out.println(new String(bytes));//string 으로 변환
-	}catch (IOException e) {
-		e.printStackTrace();
-	}
+		Scanner sc = new Scanner(System.in);
+		String[] subjects = {"국어", "영어", "수학", "과학"};
+		int[] scores = new int[subjects.length];
+		String name = "james";
+		int total = 0;
+		double ave = 0;
 		
+		for (int i = 0; i < subjects.length; i++) {
+			System.out.print(subjects[i] + " >>> ");
+			scores[i] = sc.nextInt();
+			total += scores[i];
+		}
+		ave = total / subjects.length;
+		
+		try (DataOutputStream dos = new DataOutputStream(new FileOutputStream("score.dat"))) {
+			dos.writeInt(subjects.length);
+			dos.writeUTF(name);
+			for (int score : scores) {
+				dos.writeInt(score);
+			}
+			dos.writeDouble(ave);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		sc.close();
 		
 	}
 

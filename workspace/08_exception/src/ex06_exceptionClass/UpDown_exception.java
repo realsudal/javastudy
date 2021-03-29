@@ -1,4 +1,4 @@
-package ex06_throw;
+package ex06_exceptionClass;
 /*
  * 예외 클래스는 "직렬화"를 대비해서
  * serial version id를 생성하라고 항상 경고를 띄운다.

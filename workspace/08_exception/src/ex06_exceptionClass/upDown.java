@@ -1,4 +1,4 @@
-package ex06_throw;
+package ex06_exceptionClass;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;

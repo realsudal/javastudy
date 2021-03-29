@@ -1,4 +1,4 @@
-package ex06_throw;
+package ex05_throw;
 
 public class Calculator {
 

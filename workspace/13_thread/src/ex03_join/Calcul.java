@@ -1,10 +1,17 @@
 package ex03_join;
 
-public class Calcul {
+public class Calcul extends Thread{
 
-	int result;
+	private int result;
+	private int from,to;
 	
-	public void addition(int from,int to) {
+	@Override
+	public void run() {
+		addition();
+	}
+	
+	
+	public void addition() {
 		//from~to까지 모든 정부 더한 결과 result에 저장
 		if(from >to) {
 			int temp=from;
@@ -22,6 +29,26 @@ public class Calcul {
 
 	public void setResult(int result) {
 		this.result = result;
+	}
+
+
+	public int getFrom() {
+		return from;
+	}
+
+
+	public void setFrom(int from) {
+		this.from = from;
+	}
+
+
+	public int getTo() {
+		return to;
+	}
+
+
+	public void setTo(int to) {
+		this.to = to;
 	}
 	
 	

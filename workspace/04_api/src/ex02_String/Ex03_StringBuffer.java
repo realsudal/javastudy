@@ -8,7 +8,7 @@ public class Ex03_StringBuffer {
 		
 		/*StringBuffer 와 StringBuilder 는 하는일과 쓰는 것도 같지만
 		 * StringBuilder는 single thread 환경에서 사용하고(thread가 한개)
-		 * StringBuffer는 muliple thread 환경에서 사용한다 (thread가 여러개)  ==>thread safe한 클래스 이다.
+		 * StringBuffer는 multiple thread 환경에서 사용한다 (thread가 여러개)  ==>thread safe한 클래스 이다.
 		 * 
 		 * -끝-
 		*/

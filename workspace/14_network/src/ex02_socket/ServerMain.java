@@ -38,7 +38,7 @@ public class ServerMain {
 				//클라이언트에게 보낼수있는 스트림 생성
 				OutputStream os=client.getOutputStream();
 				os.write(msg.getBytes("UTF-8"));//getbytes() : string -> byte로 변환 메서드!!!!!
-				
+				os.flush(); //혹시 스트림에 남아있는 데이터를 강제로 밀기
 				
 			}
 			

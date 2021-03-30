@@ -35,8 +35,9 @@ public class ClientMain {
 			byte[] b=new byte[50];
 			int length=is.read(b);//읽은 내용은 b에 저장, 읽은 바이트 수(글자수)는 length에 저장
 			// new string() 메서드 : byte[] ->string
-			String msg=new String(b, 0, length, "UTF-8");
+			String msg=new String(b, 0, length, "UTF-8");//b배열을 0부터 b배열길이까지 한글로 읽음
 			System.out.println(msg);
+			
 			
 			
 			

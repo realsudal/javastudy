@@ -33,7 +33,7 @@ public class InetAddressMain {
 			System.out.println(Arrays.toString(byteIp));
 			
 			short[] ip=new short[byteIp.length];
-			for(int i=0;i<ip.length;i++) {			//여기 문제 삼항연산자로도 풀수있음 
+			for(int i=0;i<ip.length;i++) {			//여기 코드 삼항연산자로도 풀수있음 
 				if(byteIp[i]<0) {
 					ip[i]=(short) (256+byteIp[i]);
 				}else {

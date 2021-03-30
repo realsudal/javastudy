@@ -29,13 +29,13 @@ public class ServerMain {
 				//클라이언트의 접속 허용.
 				Socket client = server.accept();//반환타입은 소켓(클라이언트)
 				
-				//클라이언트의 주소
+				//클라이언트의 주소 객체 생성
 				InetSocketAddress isa = (InetSocketAddress) client.getRemoteSocketAddress();
 				System.out.println("[ "+isa.getHostName()+" ] 가 접속되었습니다.");
 				
 				//클라이언트에게 웰컴메시지를 보내기 	- 포인트!! 이거 시험나옴!!
 				String msg="Welcome to server!";
-				//클라이언트에게 보낼수있는 스트림 생성
+				//클라이언트에게 보낼수있는 스트림 객체 생성
 				OutputStream os=client.getOutputStream();
 				os.write(msg.getBytes("UTF-8"));//getbytes() : string -> byte로 변환 메서드!!!!!
 				os.flush(); //혹시 스트림에 남아있는 데이터를 강제로 밀기

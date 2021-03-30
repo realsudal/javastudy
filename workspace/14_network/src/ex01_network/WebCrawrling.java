@@ -5,7 +5,7 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-public class WebCroring {
+public class WebCrawrling {
 
 	public static void main(String[] args) {
 		

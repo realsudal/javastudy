@@ -25,7 +25,7 @@ public class Person extends Thread {
 	}
 
 	@Override
-	public void run() {//스레드가 동작 시키는 메소드
+	public void run() {//스레드가 동작 시키는 메소드   => 꼭 만들어야 함!!!
 		for(int i=0;i<3;i++) {
 			eat();
 		}

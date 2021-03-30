@@ -30,7 +30,7 @@ public class ClientMain {
 			//접속성공
 			System.out.println("접속 성공");
 			
-			//server로부터 메시지 받기
+			//server로부터 메시지 받기  - 이거 시험에 나옴
 			InputStream is=client.getInputStream();
 			byte[] b=new byte[50];
 			int length=is.read(b);//읽은 내용은 b에 저장, 읽은 바이트 수(글자수)는 length에 저장

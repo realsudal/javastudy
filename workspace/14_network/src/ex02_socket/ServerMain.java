@@ -33,7 +33,7 @@ public class ServerMain {
 				InetSocketAddress isa = (InetSocketAddress) client.getRemoteSocketAddress();
 				System.out.println("[ "+isa.getHostName()+" ] 가 접속되었습니다.");
 				
-				//클라이언트에게 웰컴메시지를 보내기
+				//클라이언트에게 웰컴메시지를 보내기 	- 포인트!! 이거 시험나옴!!
 				String msg="Welcome to server!";
 				//클라이언트에게 보낼수있는 스트림 생성
 				OutputStream os=client.getOutputStream();

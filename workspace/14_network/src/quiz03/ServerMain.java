@@ -1,4 +1,4 @@
-package ex03_socket;
+package quiz03;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -7,47 +7,40 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Scanner;
 
-
 public class ServerMain {
 
 	public static void main(String[] args) {
-
-		ServerSocket server=null;
 		Socket client=null;
+		ServerSocket server=null;
 		BufferedInputStream bis=null;
-		Scanner sc=new Scanner(System.in);
 		BufferedOutputStream bos=null;
-		
-		
+		Scanner sc=new Scanner(System.in);
 		try {
 			//서버 생성
 			server =new ServerSocket();
 			server.bind(new InetSocketAddress("localhost", 4966));
+			System.out.println("==[서버 페이지]==");
+			
+			client=server.accept();
+			InetSocketAddress isa=(InetSocketAddress)client.getRemoteSocketAddress();
+			System.out.println("접속 클라이언트"+ isa.getHostName());
+			
 			
 			while(true) {
 				//클라이언트 접속
-				System.out.println("==[서버 페이지]==");
-				
-				client=server.accept();
-				InetSocketAddress isa=(InetSocketAddress)client.getRemoteSocketAddress();
-				System.out.println("접속 클라이언트"+ isa.getHostName());
-				
-				
-				//클라이언트가 보낸 메시지
+			
 				bis=new BufferedInputStream(client.getInputStream());
 				byte[] b=new byte[1024];
-				int length=bis.read(b);//메시지는 b , 글자수 length
-				String msg=new String(b, 0, length, "UTF-8");//byte -> String 으로 변경
-				System.out.print("클라이언트 : "+msg+"\n");
+				int length=bis.read(b);
+				String getMsg=new String(b, 0, length, "UTF-8");
 				
+				System.out.println("클라이언트의 답 : " +getMsg);
 				
-				//클라이언트에게 답장보내기
-				System.out.print("[서버] 나 :");
-				String re=sc.nextLine();//읽어서
-				bos =new BufferedOutputStream(client.getOutputStream());
-				bos.write(re.getBytes("UTF-8"));
+				if(getMsg.equalsIgnoreCase("exit")) {
+					System.out.println("===종료===");
+					break;
+				}
 				
-				bos.flush();
 				
 			}
 			
@@ -63,7 +56,6 @@ public class ServerMain {
 					bos.close();
 			if(!server.isClosed())
 				server.close();
-			
 			}catch (Exception e) {
 				e.printStackTrace();
 			}

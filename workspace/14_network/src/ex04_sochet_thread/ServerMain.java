@@ -3,6 +3,7 @@ package ex04_sochet_thread;
 import java.net.InetSocketAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.time.chrono.IsoChronology;
 
 public class ServerMain {
 //여기는 재평가  ->이전까지 했던게 본평가 범위
@@ -31,8 +32,8 @@ public class ServerMain {
 			e.printStackTrace();
 		}finally {
 			try {
-				if(client=)client.close();
-				if(server=)server.close();
+				if(!client.isClosed())client.close();
+				if(!server.isClosed())server.close();
 			}catch (Exception e) {
 				// TODO: handle exception
 			}

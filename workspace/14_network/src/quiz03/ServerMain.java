@@ -18,7 +18,7 @@ public class ServerMain {
 		try {
 			//서버 생성
 			server =new ServerSocket();
-			server.bind(new InetSocketAddress("localhost", 4966));
+			server.bind(new InetSocketAddress("localhost",4966));
 			System.out.println("==[서버 페이지]==");
 			
 			client=server.accept();

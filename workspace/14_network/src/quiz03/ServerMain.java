@@ -26,9 +26,7 @@ public class ServerMain {
 			System.out.println("접속 클라이언트"+ isa.getHostName());
 			
 			
-			while(true) {
-				//클라이언트 접속
-			
+			while(true) {			
 				bis=new BufferedInputStream(client.getInputStream());
 				byte[] b=new byte[1024];
 				int length=bis.read(b);
